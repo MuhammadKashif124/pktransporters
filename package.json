@@ -28,7 +28,8 @@
     "tailwindcss-animate": "latest"
   },
   "overrides": {
-    "yaml": "2.8.0"
+    "yaml": "2.8.0",
+    "ws": "8.18.2"
   },
   "devDependencies": {
     "@types/node": "latest",
