@@ -27,6 +27,9 @@
     "tailwind-merge": "latest",
     "tailwindcss-animate": "latest"
   },
+  "overrides": {
+    "yaml": "2.8.0"
+  },
   "devDependencies": {
     "@types/node": "latest",
     "@types/react": "latest",
