@@ -1,0 +1,41 @@
+{
+  "name": "pktransporters",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@portabletext/react": "latest",
+    "@radix-ui/react-slot": "latest",
+    "@sanity/image-url": "^1.1.0",
+    "@sanity/vision": "^3.99.0",
+    "class-variance-authority": "latest",
+    "clsx": "latest",
+    "framer-motion": "latest",
+    "hls.js": "^1.6.16",
+    "lucide-react": "latest",
+    "next": "latest",
+    "next-sanity": "^9.12.1",
+    "react": "latest",
+    "react-dom": "latest",
+    "sanity": "^3.99.0",
+    "tailwind-merge": "latest",
+    "tailwindcss-animate": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "autoprefixer": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "postcss": "latest",
+    "tailwindcss": "^3.4.19",
+    "typescript": "latest"
+  }
+}
