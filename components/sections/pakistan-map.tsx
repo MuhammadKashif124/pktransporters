@@ -2,17 +2,19 @@
 
 import { useCallback, useMemo, useState } from "react";
 
+// Projection: lon 60.5–77.8 → x 50–950, lat 37.1–23.5 → y 30–660
+// x = 50 + (lon - 60.5) * 52.02,  y = 30 + (37.1 - lat) * 46.32
 const PAK_CITIES = [
-  { id: "khi", name: "Karachi", role: "Port HQ", x: 240, y: 555, primary: true, fleet: 480, sla: "Same-day pickup" },
-  { id: "hyd", name: "Hyderabad", role: "Sindh", x: 295, y: 510, primary: false, fleet: 35, sla: "Same-day" },
-  { id: "lhe", name: "Lahore", role: "Punjab hub", x: 650, y: 290, primary: true, fleet: 180, sla: "24h transit" },
-  { id: "isb", name: "Islamabad", role: "Capital", x: 555, y: 185, primary: true, fleet: 95, sla: "28h transit" },
-  { id: "rwp", name: "Rawalpindi", role: "Twin city", x: 540, y: 200, primary: false, fleet: 60, sla: "28h transit" },
-  { id: "fsd", name: "Faisalabad", role: "Industrial", x: 555, y: 335, primary: false, fleet: 75, sla: "26h transit" },
-  { id: "mlt", name: "Multan", role: "Mid-route", x: 470, y: 405, primary: false, fleet: 40, sla: "16h transit" },
-  { id: "pew", name: "Peshawar", role: "KP", x: 425, y: 175, primary: false, fleet: 28, sla: "32h transit" },
-  { id: "qta", name: "Quetta", role: "Balochistan", x: 200, y: 380, primary: false, fleet: 18, sla: "On request" },
-  { id: "skt", name: "Sialkot", role: "Export hub", x: 690, y: 240, primary: false, fleet: 32, sla: "28h transit" }
+  { id: "khi", name: "Karachi",    role: "Port HQ",     x: 388, y: 593, primary: true,  fleet: 480, sla: "Same-day pickup" },
+  { id: "hyd", name: "Hyderabad",  role: "Sindh",       x: 459, y: 569, primary: false, fleet: 35,  sla: "Same-day" },
+  { id: "lhe", name: "Lahore",     role: "Punjab hub",  x: 768, y: 285, primary: true,  fleet: 180, sla: "24h transit" },
+  { id: "isb", name: "Islamabad",  role: "Capital",     x: 702, y: 185, primary: true,  fleet: 95,  sla: "28h transit" },
+  { id: "rwp", name: "Rawalpindi", role: "Twin city",   x: 710, y: 196, primary: false, fleet: 60,  sla: "28h transit" },
+  { id: "fsd", name: "Faisalabad", role: "Industrial",  x: 704, y: 291, primary: false, fleet: 75,  sla: "26h transit" },
+  { id: "mlt", name: "Multan",     role: "Mid-route",   x: 621, y: 348, primary: false, fleet: 40,  sla: "16h transit" },
+  { id: "pew", name: "Peshawar",   role: "KP",          x: 626, y: 172, primary: false, fleet: 28,  sla: "32h transit" },
+  { id: "qta", name: "Quetta",     role: "Balochistan", x: 330, y: 348, primary: false, fleet: 18,  sla: "On request" },
+  { id: "skt", name: "Sialkot",    role: "Export hub",  x: 762, y: 242, primary: false, fleet: 32,  sla: "28h transit" }
 ];
 
 const PAK_ROUTES = [
@@ -27,34 +29,41 @@ const PAK_ROUTES = [
   { from: "khi", to: "hyd", cls: "tertiary" }
 ];
 
+// Accurate Pakistan border — equirectangular projection, clockwise from SW coast
 const PAK_OUTLINE = `
-  M 295 575
-  L 270 562 L 248 568 L 215 558 L 180 540 L 160 510 L 168 478 L 175 445
-  L 140 420 L 115 380 L 95 340 L 90 300 L 110 265 L 145 245 L 180 220
-  L 180 195 L 200 165 L 235 145 L 280 140 L 320 145 L 360 135 L 390 145
-  L 410 130 L 440 110 L 460 100 L 480 115 L 490 140 L 510 130 L 540 115
-  L 575 110 L 595 95 L 615 85 L 640 95 L 660 110 L 680 95 L 695 75
-  L 715 65 L 740 75 L 750 100 L 745 130 L 720 145 L 710 165 L 720 185
-  L 735 200 L 740 225 L 720 240 L 700 250 L 680 270 L 660 295 L 685 305
-  L 705 325 L 705 350 L 690 370 L 695 395 L 685 420 L 665 430 L 640 425
-  L 620 410 L 595 415 L 575 430 L 555 445 L 540 460 L 535 480 L 515 495
-  L 490 500 L 470 510 L 450 510 L 425 500 L 405 510 L 385 528 L 365 545
-  L 340 555 L 320 568 L 295 575 Z
+  M 102 582
+  L 128 518 L 128 403 L 102 380
+  L 154 311 L 180 288
+  L 232 265 L 310 242 L 388 219 L 466 196
+  L 544 150 L 596 127 L 622 104 L 674 81
+  L 752 58 L 794 35 L 830 30
+  L 872 44 L 908 71
+  L 950 104
+  L 929 140 L 882 173 L 820 209 L 778 242
+  L 783 288 L 747 334 L 690 380 L 648 426 L 596 472
+  L 586 518 L 580 587
+  L 586 633 L 528 651 L 482 656
+  Q 462 648 440 633 Q 415 622 388 610 Q 362 600 326 587
+  Q 284 583 206 582 Q 155 582 128 582 Q 112 582 102 582
+  Z
 `;
 
-const PAK_COAST = "M 160 570 Q 230 600 320 580 L 380 555 L 410 540";
+// Makran coast highlight (Arabian Sea)
+const PAK_COAST = "M 482 656 Q 455 648 440 633 Q 415 622 388 610 Q 355 598 326 587 Q 284 582 206 582 L 128 582 L 102 582";
 
+// Approximate provincial boundary sketches
 const PAK_INTERIORS = [
-  "M 280 145 L 270 220 L 240 280 L 200 320",
-  "M 460 110 L 440 250 L 420 350 L 400 450",
-  "M 110 280 L 200 350 L 280 480"
+  "M 180 400 Q 260 390 330 350 Q 390 310 420 260",   // Balochistan east boundary
+  "M 420 260 Q 460 290 490 330 Q 530 380 545 430",   // Sindh-Punjab divider
+  "M 596 472 Q 620 440 648 426",                      // lower Punjab-Sindh
+  "M 620 300 Q 650 260 680 230 Q 700 210 720 185",   // Punjab-KPK
 ];
 
 type City = (typeof PAK_CITIES)[number];
 type Route = (typeof PAK_ROUTES)[number] | { from: string; to: string };
 
 function PakistanMap({ active, setActive }: { active: string; setActive: (id: string) => void }) {
-  const byId = useMemo(() => Object.fromEntries(PAK_CITIES.map((city) => [city.id, city])) as Record<string, City>, []);
+  const byId = useMemo(() => Object.fromEntries(PAK_CITIES.map((c) => [c.id, c])) as Record<string, City>, []);
 
   const pathFor = useCallback((route: Route) => {
     const a = byId[route.from];
@@ -67,9 +76,7 @@ function PakistanMap({ active, setActive }: { active: string; setActive: (id: st
     const nx = -dy / len;
     const ny = dx / len;
     const bend = Math.min(80, len * 0.18);
-    const cx = mx + nx * bend;
-    const cy = my + ny * bend;
-    return `M ${a.x} ${a.y} Q ${cx} ${cy} ${b.x} ${b.y}`;
+    return `M ${a.x} ${a.y} Q ${mx + nx * bend} ${my + ny * bend} ${b.x} ${b.y}`;
   }, [byId]);
 
   return (
@@ -100,23 +107,24 @@ function PakistanMap({ active, setActive }: { active: string; setActive: (id: st
       </defs>
 
       <rect width="1000" height="700" fill="url(#dotgrid)" />
-      <path d={PAK_OUTLINE} fill="url(#landg)" stroke="rgba(10, 25, 18, .18)" strokeWidth="1.25" strokeLinejoin="round" />
-      <path d={PAK_OUTLINE} fill="none" stroke="rgba(10, 25, 18, .06)" strokeWidth="3" strokeLinejoin="round" style={{ mixBlendMode: "multiply" }} />
+      <path d={PAK_OUTLINE} fill="url(#landg)" stroke="rgba(10, 25, 18, .18)" strokeWidth="1.5" strokeLinejoin="round" />
+      <path d={PAK_OUTLINE} fill="none" stroke="rgba(10, 25, 18, .06)" strokeWidth="3.5" strokeLinejoin="round" style={{ mixBlendMode: "multiply" }} />
 
       {PAK_INTERIORS.map((d) => (
-        <path key={d} d={d} fill="none" stroke="rgba(10, 25, 18, .07)" strokeWidth=".8" strokeDasharray="2 4" />
+        <path key={d} d={d} fill="none" stroke="rgba(10, 25, 18, .08)" strokeWidth=".9" strokeDasharray="3 5" />
       ))}
 
-      <path d={PAK_COAST} fill="none" stroke="rgba(15, 143, 90, .35)" strokeWidth="1.5" strokeLinecap="round" />
-      <text x="220" y="610" fontSize="10" fontFamily="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#8A9596" letterSpacing="2">ARABIAN SEA</text>
+      <path d={PAK_COAST} fill="none" stroke="rgba(15, 143, 90, .4)" strokeWidth="2" strokeLinecap="round" />
+      <text x="220" y="685" fontSize="10" fontFamily="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#8A9596" letterSpacing="2">ARABIAN SEA</text>
 
-      <text x="220" y="430" fontSize="9" fontFamily="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#B5BFBF" letterSpacing="2.5">BALOCHISTAN</text>
-      <text x="500" y="380" fontSize="9" fontFamily="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#B5BFBF" letterSpacing="2.5">PUNJAB</text>
-      <text x="400" y="140" fontSize="9" fontFamily="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#B5BFBF" letterSpacing="2.5">KHYBER PAKHTUNKHWA</text>
-      <text x="280" y="510" fontSize="9" fontFamily="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#B5BFBF" letterSpacing="2.5">SINDH</text>
-      <text x="690" y="135" fontSize="9" fontFamily="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#B5BFBF" letterSpacing="2.5">GILGIT</text>
+      <text x="200" y="420" fontSize="9" fontFamily="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#B5BFBF" letterSpacing="2">BALOCHISTAN</text>
+      <text x="640" y="390" fontSize="9" fontFamily="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#B5BFBF" letterSpacing="2">PUNJAB</text>
+      <text x="520" y="210" fontSize="8" fontFamily="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#B5BFBF" letterSpacing="1.5">KPK</text>
+      <text x="440" y="530" fontSize="9" fontFamily="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#B5BFBF" letterSpacing="2">SINDH</text>
+      <text x="790" y="75" fontSize="8" fontFamily="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#B5BFBF" letterSpacing="1.5">GILGIT</text>
+      <text x="840" y="190" fontSize="8" fontFamily="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#B5BFBF" letterSpacing="1.5">AJK</text>
 
-      <g transform="translate(920, 80)" opacity=".5">
+      <g transform="translate(940, 80)" opacity=".5">
         <circle r="22" fill="none" stroke="rgba(10, 25, 18, .15)" />
         <path d="M 0 -16 L 4 0 L 0 16 L -4 0 Z" fill="#0F8F5A" />
         <text y="-28" fontSize="10" textAnchor="middle" fontFamily="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#5A6566">N</text>
@@ -128,16 +136,9 @@ function PakistanMap({ active, setActive }: { active: string; setActive: (id: st
         const stroke = isPrimary ? "#0F8F5A" : "#5A6566";
         const opacity = isHighlighted ? 1 : isPrimary ? 0.65 : 0.35;
         const d = pathFor(route);
-
         return (
           <g key={`${route.from}-${route.to}-${index}`}>
-            <path
-              d={d}
-              stroke={isPrimary ? "url(#routeg-primary)" : "url(#routeg-secondary)"}
-              strokeWidth={isHighlighted ? "3" : "2"}
-              fill="none"
-              opacity={isHighlighted ? 1 : 0.6}
-            />
+            <path d={d} stroke={isPrimary ? "url(#routeg-primary)" : "url(#routeg-secondary)"} strokeWidth={isHighlighted ? "3" : "2"} fill="none" opacity={isHighlighted ? 1 : 0.6} />
             <path d={d} stroke={stroke} strokeWidth="1.4" fill="none" className="route-dash" opacity={opacity} strokeLinecap="round" />
             {isHighlighted && (
               <circle r="4.5" fill="#0F8F5A" stroke="white" strokeWidth="1.5">
@@ -160,7 +161,6 @@ function PakistanMap({ active, setActive }: { active: string; setActive: (id: st
         const isPort = city.id === "khi";
         const halo = isActive ? 40 : city.primary ? 28 : 18;
         const radius = isActive ? 8 : city.primary ? 6 : 4.5;
-
         return (
           <g key={city.id} onMouseEnter={() => setActive(city.id)} onFocus={() => setActive(city.id)} style={{ cursor: "pointer" }} tabIndex={0}>
             <circle cx={city.x} cy={city.y} r={halo} fill="url(#cityHalo)" />
@@ -200,7 +200,7 @@ function PakistanMap({ active, setActive }: { active: string; setActive: (id: st
 
 export function PakistanMapStage() {
   const [active, setActive] = useState("khi");
-  const activeData = PAK_CITIES.find((city) => city.id === active) ?? PAK_CITIES[0];
+  const activeData = PAK_CITIES.find((c) => c.id === active) ?? PAK_CITIES[0];
 
   return (
     <div className="pk-map-stage">

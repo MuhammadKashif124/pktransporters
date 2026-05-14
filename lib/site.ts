@@ -4,8 +4,9 @@ import { absoluteUrl } from "@/lib/utils";
 export const site = {
   name: "PK Transporters",
   legalName: "PK Transporters Logistics",
-  phone: "+92 300 0000000",
-  whatsapp: "923000000000",
+  contactName: "Muhammad Kashif",
+  phone: "+92 310 3488563",
+  whatsapp: "923103488563",
   email: "sales@pktransporters.com",
   address: "Karachi Port Area, Karachi, Sindh, Pakistan",
   areaServed: ["Karachi", "Lahore", "Islamabad", "Rawalpindi", "Pakistan"],
