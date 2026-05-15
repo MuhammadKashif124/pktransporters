@@ -37,7 +37,7 @@ export function SimplePage({
           {children || (
             <div className="grid gap-4 md:grid-cols-3">
               {["Port expertise", "Nationwide coverage", "Commercial cargo focus"].map((item) => (
-                <Card key={item}><CardContent><h2 className="text-xl font-black">{item}</h2><p className="mt-3 leading-7 text-muted-foreground">Structured for logistics buyers who need fast estimates, practical routing, and dependable communication.</p></CardContent></Card>
+                <Card key={item}><CardContent><h3 className="text-xl font-black">{item}</h3><p className="mt-3 leading-7 text-muted-foreground">Structured for logistics buyers who need fast estimates, practical routing, and dependable communication.</p></CardContent></Card>
               ))}
             </div>
           )}

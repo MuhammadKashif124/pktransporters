@@ -5,7 +5,7 @@ import { SiteHeader } from "@/components/sections/site-header";
 import { SiteFooter } from "@/components/sections/site-footer";
 import { FloatingCtas } from "@/components/sections/floating-ctas";
 import { JsonLd } from "@/components/seo/json-ld";
-import { localBusinessSchema, organizationSchema } from "@/lib/schema";
+import { localBusinessSchema, organizationSchema, websiteSchema } from "@/lib/schema";
 import { createMetadata } from "@/lib/site";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
@@ -22,6 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={inter.variable}>
         <JsonLd data={organizationSchema()} />
         <JsonLd data={localBusinessSchema()} />
+        <JsonLd data={websiteSchema()} />
         <SiteHeader />
         <main>{children}</main>
         <SiteFooter />

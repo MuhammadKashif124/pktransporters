@@ -1,13 +1,17 @@
+import type { Metadata } from "next";
 import { PackageSearch } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { createMetadata } from "@/lib/site";
 
-export const metadata = createMetadata({
-  title: "Track Shipment | PK Transporters",
-  description: "Shipment tracking UI for container, road cargo, and freight movement updates from PK Transporters.",
-  path: "/track-shipment"
-});
+export const metadata: Metadata = {
+  ...createMetadata({
+    title: "Track Shipment | PK Transporters",
+    description: "Shipment tracking UI for container, road cargo, and freight movement updates from PK Transporters.",
+    path: "/track-shipment"
+  }),
+  robots: { index: false, follow: false }
+};
 
 export default function TrackShipmentPage() {
   return (

@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const service = services.find((item) => item.slug === slug);
   if (!service) return {};
   return createMetadata({
-    title: `${service.title} Pakistan | Karachi Port Logistics & Nationwide Transport`,
+    title: `${service.title} Pakistan | PK Transporters`,
     description: service.summary,
     path: `/services/${service.slug}`,
     keywords: service.keywords
