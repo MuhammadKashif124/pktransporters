@@ -6,7 +6,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function absoluteUrl(path = "") {
-  const base = process.env.NEXT_PUBLIC_SITE_URL || "https://www.pktransporters.com";
+  const base = process.env.NEXT_PUBLIC_SITE_URL || "https://pktransporters.com";
   return `${base}${path.startsWith("/") ? path : `/${path}`}`;
 }
 
