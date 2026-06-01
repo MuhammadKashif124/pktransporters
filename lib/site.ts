@@ -7,7 +7,6 @@ export const site = {
   contactName: "Muhammad Kashif",
   phone: "+92 310 3488563",
   whatsapp: "923103488563",
-  email: "sales@pktransporters.com",
   address: "Karachi Port Area, Karachi, Sindh, Pakistan",
   areaServed: ["Karachi", "Lahore", "Islamabad", "Rawalpindi", "Pakistan"],
   coordinates: { latitude: 24.8508, longitude: 66.9777 },

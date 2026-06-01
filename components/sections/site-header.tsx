@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Menu, Phone } from "lucide-react";
+import { Menu, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { site } from "@/lib/site";
 
@@ -28,11 +28,8 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <Button asChild className="hidden sm:inline-flex" variant="outline">
-            <a href={`tel:${site.phone}`}><Phone className="h-4 w-4" /> Call Now</a>
-          </Button>
-          <Button asChild>
-            <Link href="/get-quote">Request a Quote</Link>
+          <Button asChild className="hidden sm:inline-flex bg-green-600 hover:bg-green-700 text-white border-green-600">
+            <a href={`https://wa.me/${site.whatsapp}`}><MessageCircle className="h-4 w-4" /> WhatsApp Us</a>
           </Button>
           <Button variant="ghost" size="icon" className="lg:hidden" aria-label="Open navigation">
             <Menu className="h-5 w-5" />

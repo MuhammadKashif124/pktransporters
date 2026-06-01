@@ -10,7 +10,6 @@ export function organizationSchema() {
     name: site.legalName,
     url: absoluteUrl("/"),
     telephone: site.phone,
-    email: site.email,
     address: { "@type": "PostalAddress", streetAddress: site.address, addressCountry: "PK" },
     areaServed: site.areaServed,
     sameAs: [] as string[]
@@ -26,7 +25,6 @@ export function localBusinessSchema() {
     description: site.tagline,
     url: absoluteUrl("/"),
     telephone: site.phone,
-    email: site.email,
     address: {
       "@type": "PostalAddress",
       streetAddress: site.address,

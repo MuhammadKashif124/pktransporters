@@ -1,11 +1,12 @@
 import Link from "next/link";
-import { ArrowRight, Boxes, CheckCircle2, Factory, MapPinned, Phone, Route, ShieldCheck, Ship, Truck } from "lucide-react";
+import { ArrowRight, Boxes, CheckCircle2, Factory, MapPinned, MessageCircle, Route, ShieldCheck, Ship, Truck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { FadeIn } from "@/components/sections/motion";
 import { PakistanMapStage } from "@/components/sections/pakistan-map";
 import { cityPages, services, testimonials } from "@/lib/content";
+import { site } from "@/lib/site";
 
 const stats = [
   ["1,247+", "In-transit"],
@@ -33,8 +34,8 @@ export function Hero() {
             <Link className="pk-btn pk-btn-primary" href="/get-quote">
               Request a quote <ArrowRight className="h-4 w-4" />
             </Link>
-            <a className="pk-btn pk-btn-line" href="tel:+922135000900">
-              <Phone className="h-4 w-4" /> Talk to ops
+            <a className="pk-btn pk-btn-line" href={`https://wa.me/${site.whatsapp}`}>
+              <MessageCircle className="h-4 w-4" /> WhatsApp Us
             </a>
           </div>
         </div>

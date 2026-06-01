@@ -26,8 +26,7 @@ export function SiteFooter() {
           <div className="font-bold">Contact</div>
           <div className="mt-3 space-y-2 text-sm text-slate-300">
             <p>{site.address}</p>
-            <p>{site.phone}</p>
-            <p>{site.email}</p>
+            <a href={`https://wa.me/${site.whatsapp}`} className="block text-green-400 hover:text-green-300">WhatsApp: {site.phone}</a>
           </div>
         </div>
       </div>

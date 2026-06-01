@@ -1,5 +1,6 @@
 import { SimplePage } from "@/components/sections/simple-page";
 import { createMetadata, site } from "@/lib/site";
+import { MessageCircle } from "lucide-react";
 
 export const metadata = createMetadata({
   title: "Contact PK Transporters | Logistics Company Karachi",
@@ -9,16 +10,17 @@ export const metadata = createMetadata({
 
 export default function ContactPage() {
   return (
-    <SimplePage eyebrow="Contact" title="Talk to a logistics expert." summary="Share cargo size, pickup point, destination, timing, and documentation needs. The team will respond with a practical movement plan and estimate.">
-      <div className="grid gap-8 lg:grid-cols-2">
-        <div className="rounded-lg border p-6">
-          <h2 className="text-2xl font-black">Contact details</h2>
-          <p className="mt-4 font-semibold">{site.contactName}</p>
-          <p className="mt-2">{site.phone}</p>
-          <p className="mt-2">{site.email}</p>
-          <p className="mt-2 text-sm text-muted-foreground">{site.address}</p>
-        </div>
-        <iframe title="PK Transporters Karachi map" className="h-96 w-full rounded-lg border" loading="lazy" src="https://www.google.com/maps?q=Karachi%20Port%20Pakistan&output=embed" />
+    <SimplePage eyebrow="Contact" title="Talk to a logistics expert." summary="Message us on WhatsApp with your cargo details — container size, pickup point, destination, timing, and documentation needs. We'll respond with a practical movement plan and estimate.">
+      <div className="flex flex-col items-center gap-6 py-8">
+        <a
+          href={`https://wa.me/${site.whatsapp}`}
+          className="inline-flex items-center gap-3 rounded-2xl bg-green-600 px-10 py-5 text-xl font-bold text-white shadow-lg hover:bg-green-700 transition-colors"
+        >
+          <MessageCircle className="h-7 w-7" />
+          Chat on WhatsApp
+        </a>
+        <p className="text-muted-foreground text-sm">{site.phone} &mdash; {site.contactName}</p>
+        <p className="text-muted-foreground text-sm">{site.address}</p>
       </div>
     </SimplePage>
   );

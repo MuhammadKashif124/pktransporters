@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, MapPinned, Phone, Route, Warehouse } from "lucide-react";
+import { ArrowRight, CheckCircle2, MapPinned, MessageCircle, Route, Warehouse } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -19,8 +19,8 @@ export function ServiceLanding({ service }: { service: Service }) {
             <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-300">{service.summary}</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg"><Link href="/get-quote">Get Freight Estimate</Link></Button>
-              <Button asChild size="lg" variant="outline" className="border-white/30 bg-white/10 text-white hover:bg-white/20">
-                <a href={`tel:${site.phone}`}><Phone className="h-4 w-4" /> Speak to Logistics Expert</a>
+              <Button asChild size="lg" variant="outline" className="border-white/30 bg-green-600 text-white hover:bg-green-700 border-green-600">
+                <a href={`https://wa.me/${site.whatsapp}`}><MessageCircle className="h-4 w-4" /> WhatsApp Us</a>
               </Button>
             </div>
           </FadeIn>
