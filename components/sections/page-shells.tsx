@@ -3,7 +3,6 @@ import { ArrowRight, CheckCircle2, MapPinned, MessageCircle, Route, Warehouse } 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { QuoteForm } from "@/components/sections/forms";
 import { FadeIn } from "@/components/sections/motion";
 import { cityPages, services, type CityPage, type Service } from "@/lib/content";
 import { site } from "@/lib/site";
@@ -12,7 +11,7 @@ export function ServiceLanding({ service }: { service: Service }) {
   return (
     <>
       <section className="bg-slate-950 py-20 text-white">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 lg:grid-cols-[1fr_0.55fr]">
+        <div className="mx-auto max-w-7xl px-4">
           <FadeIn>
             <Badge className="border-white/20 bg-white/10 text-white">{service.eyebrow}</Badge>
             <h1 className="mt-5 max-w-4xl text-balance text-4xl font-black md:text-6xl">{service.title} in Pakistan</h1>
@@ -24,13 +23,12 @@ export function ServiceLanding({ service }: { service: Service }) {
               </Button>
             </div>
           </FadeIn>
-          <FadeIn><QuoteForm compact /></FadeIn>
         </div>
       </section>
       <section className="section-pad bg-white">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
-            <Badge>Direct answer</Badge>
+            <Badge>What this covers</Badge>
             <h2 className="mt-4 text-3xl font-black">What is {service.title.toLowerCase()}?</h2>
             <p className="mt-5 leading-8 text-muted-foreground">{service.description}</p>
           </div>
@@ -69,7 +67,7 @@ export function CityLanding({ page }: { page: CityPage }) {
   return (
     <>
       <section className="bg-slate-950 py-20 text-white">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 lg:grid-cols-[1fr_0.55fr]">
+        <div className="mx-auto max-w-7xl px-4">
           <FadeIn>
             <Badge className="border-white/20 bg-white/10 text-white">{page.city} logistics</Badge>
             <h1 className="mt-5 max-w-4xl text-balance text-4xl font-black md:text-6xl">{page.title}</h1>
@@ -81,7 +79,6 @@ export function CityLanding({ page }: { page: CityPage }) {
               </Button>
             </div>
           </FadeIn>
-          <FadeIn><QuoteForm compact /></FadeIn>
         </div>
       </section>
       <section className="section-pad bg-white">
@@ -129,7 +126,7 @@ function SeoFaq({ faqs, title }: { faqs: { question: string; answer: string }[];
     <section className="section-pad bg-white">
       <div className="mx-auto grid max-w-7xl gap-8 px-4 lg:grid-cols-[0.65fr_1.35fr]">
         <div>
-          <Badge>AI-ready answers</Badge>
+          <Badge>Frequently asked</Badge>
           <h2 className="mt-4 text-3xl font-black">{title}</h2>
         </div>
         <div className="grid gap-4">

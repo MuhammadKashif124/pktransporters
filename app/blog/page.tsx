@@ -7,7 +7,7 @@ import { createMetadata } from "@/lib/site";
 
 export const metadata = createMetadata({
   title: "Logistics Blog Pakistan | Container Transport & Karachi Port Guides",
-  description: "SEO topical authority hub for logistics guides, import/export, freight forwarding, customs clearance, Karachi port updates, and container transport.",
+  description: "Practical guides on container transport, freight forwarding, customs clearance, Karachi port operations, and logistics planning for Pakistan importers and exporters.",
   path: "/blog"
 });
 
@@ -15,7 +15,7 @@ export default function BlogPage() {
   return (
     <section className="section-pad bg-white">
       <div className="mx-auto max-w-7xl px-4">
-        <Badge>Topical authority hub</Badge>
+        <Badge>Logistics knowledge base</Badge>
         <h1 className="mt-4 max-w-4xl text-4xl font-black md:text-6xl">Pakistan logistics guides for serious cargo buyers.</h1>
         <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {blogPosts.map((post) => (

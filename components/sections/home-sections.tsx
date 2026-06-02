@@ -125,7 +125,7 @@ export function ServicesGrid() {
     <section className="section-pad bg-[var(--pk-bg-elev)]">
       <div className="mx-auto max-w-7xl px-4">
         <div className="max-w-3xl">
-          <Badge>Service silos built for SEO</Badge>
+          <Badge>What we do</Badge>
           <h2 className="pk-display mt-4 text-3xl md:text-5xl">Container, freight, port, and inland logistics under one operating plan.</h2>
         </div>
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -166,7 +166,7 @@ export function WhyChoose() {
     <section className="section-pad bg-[var(--pk-ink-0)] text-white">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 lg:grid-cols-2">
         <FadeIn>
-          <Badge className="border-white/20 bg-white/10 text-white">Enterprise trust positioning</Badge>
+          <Badge className="border-white/20 bg-white/10 text-white">Why PK Transporters</Badge>
           <h2 className="mt-4 text-3xl font-medium leading-tight md:text-5xl">Built around buyer pain points, not generic company claims.</h2>
           <p className="mt-5 text-lg leading-8 text-slate-300">
             Logistics buyers need certainty: cargo readiness, port release timing, trailer availability, route risk, transparent estimates, and fast communication. PK Transporters structures every inquiry around those decisions.
@@ -229,7 +229,7 @@ export function TestimonialsFaq() {
         </div>
         <div className="mt-14 grid gap-8 lg:grid-cols-[0.7fr_1.3fr]">
           <div>
-            <Badge>FAQ-rich GEO content</Badge>
+            <Badge>Common questions</Badge>
             <h2 className="mt-4 text-3xl font-black">Common logistics questions answered clearly.</h2>
           </div>
           <div className="grid gap-4">

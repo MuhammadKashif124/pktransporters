@@ -17,7 +17,7 @@ export function SiteFooter() {
           </div>
         </div>
         <div>
-          <div className="font-bold">City SEO Pages</div>
+          <div className="font-bold">Coverage Areas</div>
           <div className="mt-3 grid gap-2 text-sm text-slate-300">
             {cityPages.slice(0, 7).map((page) => <Link key={page.slug} href={`/locations/${page.slug}`}>{page.title}</Link>)}
           </div>
