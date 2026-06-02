@@ -32,9 +32,7 @@ export function ServiceLanding({ service }: { service: Service }) {
           <div>
             <Badge>Direct answer</Badge>
             <h2 className="mt-4 text-3xl font-black">What is {service.title.toLowerCase()}?</h2>
-            <p className="mt-5 leading-8 text-muted-foreground">
-              {service.title} is the planned movement, coordination, and documentation support required to move commercial cargo from origin to destination. For Pakistan-based businesses, that often means Karachi port pickup, container trailer coordination, customs release timing, inland road movement, and delivery to factories, warehouses, dry ports, or customer locations.
-            </p>
+            <p className="mt-5 leading-8 text-muted-foreground">{service.description}</p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {service.benefits.map((benefit) => (
@@ -73,7 +71,7 @@ export function CityLanding({ page }: { page: CityPage }) {
       <section className="bg-slate-950 py-20 text-white">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 lg:grid-cols-[1fr_0.55fr]">
           <FadeIn>
-            <Badge className="border-white/20 bg-white/10 text-white">Local SEO landing page</Badge>
+            <Badge className="border-white/20 bg-white/10 text-white">{page.city} logistics</Badge>
             <h1 className="mt-5 max-w-4xl text-balance text-4xl font-black md:text-6xl">{page.title}</h1>
             <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-300">{page.summary}</p>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -91,9 +89,7 @@ export function CityLanding({ page }: { page: CityPage }) {
           <div>
             <Badge>{page.city} logistics coverage</Badge>
             <h2 className="mt-4 text-3xl font-black">Service availability in {page.city}</h2>
-            <p className="mt-5 leading-8 text-muted-foreground">
-              PK Transporters supports {page.focus} for containerized cargo, road cargo, import/export shipments, warehouse dispatches, factory deliveries, and Karachi-port connected routes. The page is structured to answer buyer questions clearly for search engines and AI answer systems.
-            </p>
+            <p className="mt-5 leading-8 text-muted-foreground">{page.body}</p>
             <div className="mt-6 grid gap-3">
               {page.routes.map((route) => (
                 <div key={route} className="flex gap-3 rounded-lg border p-4 font-semibold"><Route className="h-5 w-5 text-accent" /> {route}</div>

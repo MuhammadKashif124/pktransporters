@@ -5,6 +5,7 @@ export type Service = {
   title: string;
   eyebrow: string;
   summary: string;
+  description: string;
   keywords: string[];
   industries: string[];
   process: string[];
@@ -18,6 +19,7 @@ export type CityPage = {
   city: string;
   focus: string;
   summary: string;
+  body: string;
   industrialZones: string[];
   routes: string[];
   faqs: FAQ[];
@@ -42,6 +44,7 @@ export const services: Service[] = [
     title: "Container Services",
     eyebrow: "Containerized cargo",
     summary: "End-to-end container logistics for importers, exporters, factories, and commercial cargo clients moving through Karachi ports and across Pakistan.",
+    description: "Karachi Port and Port Qasim together handled over 2.65 million TEUs in FY2024–25, making them the entry and exit point for the overwhelming majority of Pakistan's containerized trade. PK Transporters coordinates the full container cycle — from port release through WeBOC customs clearance to inland trailer dispatch — serving importers, exporters, textile mills, and shipping agencies on both 20ft and 40ft container movements. With government initiatives targeting average container dwell time reduction to under 48 hours, having a logistics partner who prepares documentation before vessel arrival is now a measurable cost advantage.",
     keywords: ["container services Pakistan", "FCL container logistics", "port container handling", "container transport company Pakistan"],
     industries: ["Importers", "Exporters", "Textile mills", "Industrial factories", "Shipping agencies"],
     process: [
@@ -68,7 +71,7 @@ export const services: Service[] = [
       },
       {
         question: "How do I request a container services quote?",
-        answer: "Submit your container size, pickup point, delivery destination, cargo type, and timing requirements through the quote form. The team responds with a freight estimate and route plan before any commitment."
+        answer: "Send your container size, pickup point, delivery destination, cargo type, and timing requirements via WhatsApp. The team responds with a freight estimate and route plan before any commitment."
       }
     ]
   },
@@ -77,6 +80,7 @@ export const services: Service[] = [
     title: "20ft Container Transport",
     eyebrow: "Port-to-door moves",
     summary: "Reliable 20ft container transport for FCL cargo, industrial supplies, export shipments, and inland deliveries from Karachi to major business cities.",
+    description: "A standard 20ft ISO container has an internal volume of approximately 33 cubic metres and a maximum payload of around 22,000 kg — making it the preferred unit for dense cargo like steel, chemicals, machinery, and bagged raw materials where weight is reached before volume. For Pakistan importers, the 20ft container is the most common FCL unit arriving at Karachi Port and Port Qasim. PK Transporters dispatches dedicated 20ft chassis trailers from both port terminals, covering the Karachi–Lahore corridor (approximately 1,200 km, 2–3 days) and the Karachi–Islamabad route (approximately 1,400 km, 3–5 days) under weight-bridge-compliant documentation.",
     keywords: ["20ft container transport Pakistan", "twenty foot container Karachi", "20ft FCL cargo", "20ft container trailer hire"],
     industries: ["FCL importers", "Textile exporters", "Industrial suppliers", "SME cargo teams", "Pharmaceutical distributors"],
     process: [
@@ -95,7 +99,7 @@ export const services: Service[] = [
     faqs: [
       {
         question: "What is the maximum cargo weight for a 20ft container?",
-        answer: "A standard 20ft container typically carries 18,000 to 22,000 kg of cargo net weight, depending on commodity density and road weight compliance requirements in Pakistan."
+        answer: "A standard 20ft container typically carries 18,000 to 22,000 kg of cargo net weight, depending on commodity density and road weight compliance requirements in Pakistan. NHMP regulations require goods transport vehicles to comply with the National Highways and Motorways (Dimensions of Goods Transport Vehicles) Rules 2017."
       },
       {
         question: "Can you arrange 20ft container transport from Port Qasim?",
@@ -103,7 +107,7 @@ export const services: Service[] = [
       },
       {
         question: "What is the typical transit time for a 20ft container from Karachi to Lahore?",
-        answer: "Karachi to Lahore container transit is typically 2 to 3 days by road depending on port release timing, route conditions, and delivery point access."
+        answer: "Karachi to Lahore container transit is typically 2 to 3 days by road depending on port release timing, route conditions, and delivery point access. The route covers approximately 1,200 km via the National Highway and M-2 motorway corridor."
       }
     ]
   },
@@ -112,6 +116,7 @@ export const services: Service[] = [
     title: "40ft Container Transport",
     eyebrow: "High-volume cargo",
     summary: "40ft container trailer planning for larger shipments, textile cargo, machinery, commercial goods, and nationwide containerized cargo movement.",
+    description: "Pakistan's textile sector exported $17.887 billion in goods in FY2024–25, with the vast majority shipped in 40ft and 40ft High Cube containers stuffed at mills in Karachi, Faisalabad, Sialkot, and Lahore. A standard 40ft container carries approximately 67 cubic metres of cargo and a net payload of up to 26,500 kg, while the 40ft High Cube adds an extra 30 cm of internal height for bulkier goods like garment bales. PK Transporters maintains 40ft and 40ft HC trailer availability for both import port pickup and export factory placement, with priority scheduling built around vessel cut-off deadlines on major shipping lines.",
     keywords: ["40ft container transport Pakistan", "40ft container trailer Karachi", "high cube container transport", "forty foot container logistics Pakistan"],
     industries: ["Textile exporters", "Machinery importers", "Retail distributors", "Bulk commodity traders", "Project cargo clients"],
     process: [
@@ -130,7 +135,7 @@ export const services: Service[] = [
     faqs: [
       {
         question: "What is the cargo capacity of a 40ft container?",
-        answer: "A standard 40ft container carries approximately 24,000 to 27,000 kg of cargo net weight, while a 40ft High Cube adds extra internal height for taller or bulkier commodities."
+        answer: "A standard 40ft container carries approximately 24,000 to 27,000 kg of cargo net weight, while a 40ft High Cube adds extra internal height for taller or bulkier commodities. In Pakistan, most textile export containers are 40ft HC due to the volume requirements of fabric bales and garments."
       },
       {
         question: "Do you handle 40ft High Cube containers?",
@@ -138,7 +143,7 @@ export const services: Service[] = [
       },
       {
         question: "Can 40ft containers be transported to Faisalabad and Sialkot?",
-        answer: "Yes. The route network includes Faisalabad and Sialkot in addition to Lahore, Islamabad, and Rawalpindi, covering Pakistan's main textile and industrial production cities."
+        answer: "Yes. The route network includes Faisalabad and Sialkot in addition to Lahore, Islamabad, and Rawalpindi, covering Pakistan's main textile and industrial production cities. Faisalabad alone accounts for a significant share of Pakistan's cotton and knitwear exports."
       }
     ]
   },
@@ -147,6 +152,7 @@ export const services: Service[] = [
     title: "Container Haulage",
     eyebrow: "Haulage operations",
     summary: "Container haulage services connecting Karachi Port, Port Qasim, dry ports, warehouses, factories, and industrial zones.",
+    description: "Container haulage — the short-haul move from a port terminal to a nearby warehouse, CFS, or factory — is one of the most time-sensitive links in the import chain. At Karachi Port, a gate pass expires within the terminal's slot window, meaning a trailer that arrives late or without correct documentation loses its place in the queue and accumulates additional dwell costs. Pakistan Customs currently targets reducing average dwell time from the current 3–6 days to under 48 hours, so importers who brief their hauler before the vessel arrives move significantly faster. PK Transporters operates at KICT, PICT, QICT, and FOTCO with established gate procedures at each terminal.",
     keywords: ["container haulage Karachi", "port haulage Pakistan", "container drayage Pakistan", "port to warehouse container movement"],
     industries: ["Port importers", "Warehouse operators", "Factory receiving teams", "Third-party logistics companies", "CFS operators"],
     process: [
@@ -182,6 +188,7 @@ export const services: Service[] = [
     title: "Container Trailer Services",
     eyebrow: "Trailer fleet access",
     summary: "Dedicated container trailer services for loaded and empty container movement with route planning and delivery coordination.",
+    description: "Container trailers — chassis units equipped with twist locks to secure 20ft and 40ft ISO boxes — are the primary vehicle type for port-to-inland container movement in Pakistan. Unlike flatbed trucks, container chassis trailers are designed to carry a single container securely at legal road weight limits. Pakistan's goods transport vehicle regulations, under the National Highways and Motorways (Dimensions of Goods Transport Vehicles) Rules 2017, set axle load limits that determine how much cargo can legally move per trip. PK Transporters maintains weight-bridge documentation for each move and assigns trailers based on container size, cargo weight, and destination to ensure full compliance on national highways and motorways.",
     keywords: ["container trailer services Pakistan", "container chassis hire Karachi", "flatbed trailer Pakistan", "trailer hire logistics Pakistan"],
     industries: ["Container importers", "Export cargo teams", "Shipping lines needing inland moves", "Factory dispatch teams", "Freight forwarding agents"],
     process: [
@@ -217,6 +224,7 @@ export const services: Service[] = [
     title: "Low Bed Trailer Services",
     eyebrow: "Oversized cargo",
     summary: "Low bed trailer support for heavy machinery, plant equipment, project cargo, and industrial cargo movement across Pakistan.",
+    description: "Pakistan's infrastructure investment under CPEC and national power sector expansion programmes has generated consistent demand for oversized and heavy cargo transport. Transformers, generators, turbine components, and construction plant regularly arrive at Karachi Port and Port Qasim as break-bulk or project cargo and require low-bed trailer transport to project sites across the country. NHMP regulations require abnormal load permits and, in many cases, police escort for cargo exceeding standard dimensional or weight limits on national highways and motorways. PK Transporters coordinates pre-movement route surveys, NHMP permit applications, and night-movement scheduling — the most common approach for urban route segments where overhead clearances and traffic are most restrictive.",
     keywords: ["low bed trailer Pakistan", "lowboy trailer Karachi", "heavy equipment transport Pakistan", "oversized cargo transport Pakistan"],
     industries: ["EPC contractors", "Power plant projects", "Construction companies", "Mining equipment importers", "Industrial machinery buyers"],
     process: [
@@ -252,6 +260,7 @@ export const services: Service[] = [
     title: "Heavy Cargo Transport",
     eyebrow: "Industrial freight",
     summary: "Heavy cargo transport for factories, EPC contractors, industrial suppliers, and infrastructure cargo requiring careful route and equipment planning.",
+    description: "Pakistan's national highway and motorway network — including the M-1 (Islamabad–Peshawar), M-2 (Lahore–Islamabad), M-3 (Lahore–Abdul Hakam), M-4 (Abdul Hakam–Multan), and N-55 (Karachi–Lahore National Highway) — forms the backbone of heavy cargo movement. NHMP enforces a maximum speed of 90 km/h for heavy transport vehicles on motorways and 65 km/h on highways, alongside strict overloading checks. Goods transport vehicles that are overweight at motorway weight bridges are stopped, fined, and required to off-load excess cargo before proceeding. PK Transporters prepares weight-bridge compliant loading plans before dispatch to prevent these delays on high-value industrial moves.",
     keywords: ["heavy cargo transport Pakistan", "heavy haulage Pakistan", "industrial freight Karachi", "project cargo transport Pakistan"],
     industries: ["EPC project companies", "Steel and metal traders", "Construction material suppliers", "Power sector operators", "Government infrastructure projects"],
     process: [
@@ -270,7 +279,7 @@ export const services: Service[] = [
     faqs: [
       {
         question: "What is the maximum payload you can handle for heavy cargo?",
-        answer: "Payload capacity depends on trailer configuration, axle spread, and route permissions. The team assesses each heavy cargo move individually based on weight, dimensions, and destination."
+        answer: "Payload capacity depends on trailer configuration, axle spread, and route permissions. The team assesses each heavy cargo move individually based on weight, dimensions, and destination to confirm compliance with NHMP axle load limits."
       },
       {
         question: "Do you coordinate crane lifts for heavy cargo loading?",
@@ -287,6 +296,7 @@ export const services: Service[] = [
     title: "Freight Services",
     eyebrow: "Multimodal freight",
     summary: "Freight services covering road cargo, inland freight, sea freight coordination, air freight support, and customs-connected logistics.",
+    description: "Pakistan's freight market spans road, sea, and air modes, with road transport carrying the dominant share of domestic cargo movement. The country's total trade passed through approximately 54 million tons of cargo at Karachi Port alone in FY2024–25. Road freight rates on the Karachi–Lahore route reached approximately Rs14,000 per ton in April 2026 following a sharp rise in diesel prices, making route and mode optimisation a genuine cost lever for businesses with regular freight volumes. PK Transporters coordinates road cargo, sea freight documentation, and air freight support under a single contact — reducing the coordination burden for businesses managing multiple shipment types simultaneously.",
     keywords: ["freight services Pakistan", "multimodal freight Pakistan", "cargo services Karachi", "commercial freight company Pakistan"],
     industries: ["Trading companies", "Distributors", "Manufacturers", "Retail chains", "E-commerce fulfilment teams"],
     process: [
@@ -322,6 +332,7 @@ export const services: Service[] = [
     title: "Freight Forwarding",
     eyebrow: "Import/export logistics",
     summary: "Freight forwarding support for import/export businesses needing documentation coordination, carrier alignment, customs clearance, and inland delivery.",
+    description: "Freight forwarding in Pakistan involves navigating WeBOC — the Federal Board of Revenue's web-based customs system — where clearing agents file goods declarations, pay import duties, and receive channel-based risk assessment (Green, Yellow, or Red) before a container can leave the port. Pakistan's imports reached record levels in recent years, with Karachi Port processing over 1,093 container vessels in FY2024–25. PK Transporters works with licensed clearing agents to coordinate pre-arrival documentation filing, HS code verification, duty payment timing, and port release — compressing the clearance timeline and reducing the risk of demurrage charges that accumulate once a container's free days expire.",
     keywords: ["freight forwarding Pakistan", "import export forwarder Karachi", "customs freight forwarder Pakistan", "sea freight forwarder Karachi"],
     industries: ["Importers", "Exporters", "Manufacturing companies", "Trading houses", "Pharmaceutical companies"],
     process: [
@@ -340,7 +351,7 @@ export const services: Service[] = [
     faqs: [
       {
         question: "What does freight forwarding include?",
-        answer: "Freight forwarding covers carrier booking, bill of lading coordination, customs filing, cargo insurance guidance, port release coordination, and inland delivery to the final destination."
+        answer: "Freight forwarding covers carrier booking, bill of lading coordination, customs filing through WeBOC, duty payment coordination, port release management, and inland delivery to the final destination."
       },
       {
         question: "Do you handle both FCL and LCL freight forwarding?",
@@ -348,7 +359,7 @@ export const services: Service[] = [
       },
       {
         question: "Can you forward regulated or sensitive cargo?",
-        answer: "Yes, with advance notice and proper documentation. Regulated commodities require specific permits and pre-shipment coordination with relevant authorities."
+        answer: "Yes, with advance notice and proper documentation. Regulated commodities require specific permits from PSQCA, DRAP, or other relevant authorities and pre-shipment coordination before filing the goods declaration."
       }
     ]
   },
@@ -357,6 +368,7 @@ export const services: Service[] = [
     title: "Sea Freight",
     eyebrow: "Ocean cargo",
     summary: "Sea freight coordination for containerized imports and exports moving through Karachi Port and Port Qasim.",
+    description: "Karachi Port and Port Qasim together handle Pakistan's entire ocean trade, with Karachi Port processing 2.65 million TEUs and over 54 million tons of total cargo in FY2024–25 alone — its highest annual volume on record. The port served 1,943 vessels during the year, including 1,093 container ships. Pakistan's exports to the Middle East typically transit in 5–10 days; shipments to European markets take 18–25 days. Pakistan's textile exports — which reached $17.887 billion in FY2024–25, representing 55.83% of total national exports — move almost entirely by sea through these two ports, making vessel cut-off management and container placement one of the most time-critical logistics tasks in the country.",
     keywords: ["sea freight Pakistan", "ocean freight Karachi", "FCL sea freight Pakistan", "container shipping Karachi Port"],
     industries: ["Exporters shipping to international markets", "Importers receiving sea containers", "Shipping agencies", "Textile export companies", "Industrial equipment buyers"],
     process: [
@@ -375,7 +387,7 @@ export const services: Service[] = [
     faqs: [
       {
         question: "Which ports do you use for sea freight in Pakistan?",
-        answer: "Sea freight operations primarily use Karachi Port (KICT, PICT) and Port Qasim (QICT, FOTCO). The port selection depends on cargo type, shipping line allocation, and destination."
+        answer: "Sea freight operations primarily use Karachi Port (KICT, PICT) and Port Qasim (QICT, FOTCO). The port selection depends on cargo type, shipping line allocation, and destination. Karachi Port processed a record 2.65 million TEUs in FY2024–25."
       },
       {
         question: "How long does sea freight take from Pakistan to the Middle East?",
@@ -383,7 +395,7 @@ export const services: Service[] = [
       },
       {
         question: "Can you handle sea freight for Pakistan's textile exports?",
-        answer: "Yes. Textile export sea freight is a core part of operations, covering container placement at factories, stuffing coordination, port delivery before cut-off, and export BL documentation."
+        answer: "Yes. Textile export sea freight is a core part of operations, covering container placement at factories, stuffing coordination, port delivery before cut-off, and export BL documentation. Pakistan's textile sector exported $17.887 billion in FY2024–25, representing over 55% of total exports."
       }
     ]
   },
@@ -392,6 +404,7 @@ export const services: Service[] = [
     title: "Air Freight",
     eyebrow: "Urgent shipments",
     summary: "Air freight coordination for time-sensitive commercial cargo, spare parts, documents, and high-priority supply chain needs.",
+    description: "Air freight from Pakistan operates primarily through Jinnah International Airport in Karachi (cargo throughput capacity exceeding 100,000 tonnes annually), Allama Iqbal International in Lahore, and Islamabad International Airport. It is the right mode for time-sensitive shipments where the sea freight transit of 5–25 days to major markets is too slow — typically for pharmaceuticals, fashion samples, spare parts, electronics, and perishables. Air freight rates are approximately 4–6 times higher per kilogram than sea freight on equivalent lanes, so the decision to ship by air is a cost-versus-time calculation. PK Transporters coordinates airside documentation, air waybill issuance, and airport-to-door delivery at destination.",
     keywords: ["air freight Pakistan", "air cargo Karachi", "express cargo Pakistan", "urgent shipment Karachi airport"],
     industries: ["Pharmaceutical companies", "Spare parts suppliers", "Electronics importers", "Fashion and garment exporters", "Time-critical commercial cargo teams"],
     process: [
@@ -410,11 +423,11 @@ export const services: Service[] = [
     faqs: [
       {
         question: "When should I use air freight instead of sea freight?",
-        answer: "Air freight is appropriate when transit time is critical, cargo is high-value relative to its weight, shelf life is limited, or the shipment window is too tight for sea transit."
+        answer: "Air freight is appropriate when transit time is critical, cargo is high-value relative to its weight, shelf life is limited, or the shipment window is too tight for sea transit. Sea freight from Karachi to the Gulf takes 5–10 days; air freight typically takes 1–3 days."
       },
       {
         question: "What cargo is restricted from air transport?",
-        answer: "Lithium batteries, flammable liquids, compressed gases, and other hazardous materials are subject to airline restrictions. Confirmation is required before booking for any regulated commodity."
+        answer: "Lithium batteries, flammable liquids, compressed gases, and other hazardous materials are subject to IATA Dangerous Goods Regulations and airline restrictions. Confirmation is required before booking for any regulated commodity."
       },
       {
         question: "Can you arrange air freight from Lahore or Islamabad airports?",
@@ -427,6 +440,7 @@ export const services: Service[] = [
     title: "Inland Transportation",
     eyebrow: "Nationwide delivery",
     summary: "Inland transportation from ports and warehouses to Lahore, Islamabad, Rawalpindi, Faisalabad, Sialkot, Multan, Peshawar, and Pakistan-wide destinations.",
+    description: "Pakistan's motorway and national highway network connects Karachi Port to every major commercial city in the country. The M-9 motorway links the port area to the M-2 superhighway, which runs from Karachi through Lahore to Islamabad — the primary freight artery for containerized cargo. Road freight rates on the Karachi–Lahore corridor have risen to approximately Rs14,000 per ton as of April 2026 due to fuel price increases, making accurate freight estimates and efficient route planning a key buyer priority. PK Transporters covers the full national freight map: Karachi to Lahore (1,200 km, 2–3 days), Karachi to Islamabad (1,400 km, 3–5 days), and secondary routes to Faisalabad, Sialkot, Multan, Hyderabad, Sukkur, and Peshawar.",
     keywords: ["inland transportation Pakistan", "road transport Pakistan", "Karachi to Lahore cargo", "nationwide freight delivery Pakistan"],
     industries: ["Importers receiving nationwide delivery", "Distribution companies", "FMCG brands", "Industrial equipment buyers", "Factory-to-factory cargo teams"],
     process: [
@@ -445,11 +459,11 @@ export const services: Service[] = [
     faqs: [
       {
         question: "Do you provide Karachi to Lahore container transport?",
-        answer: "Yes. Karachi to Lahore is one of the most frequent routes, covering the National Highway and Motorway M-2 corridor with 20ft and 40ft container capacity."
+        answer: "Yes. Karachi to Lahore is one of the most frequent routes, covering the National Highway and Motorway M-2 corridor (approximately 1,200 km) with 20ft and 40ft container capacity, typically 2–3 days in transit."
       },
       {
         question: "What is the transit time from Karachi to Islamabad?",
-        answer: "Karachi to Islamabad road transport typically takes 3 to 5 days depending on cargo type, vehicle availability, and route conditions."
+        answer: "Karachi to Islamabad road transport typically takes 3 to 5 days covering approximately 1,400 km via the National Highway and M-2/M-1 motorway depending on cargo type, vehicle availability, and route conditions."
       },
       {
         question: "Can you deliver to factory gates and industrial estates?",
@@ -462,6 +476,7 @@ export const services: Service[] = [
     title: "Road Cargo",
     eyebrow: "Commercial cargo",
     summary: "Road cargo services for industrial goods, palletized shipments, containerized cargo, and factory-to-market distribution.",
+    description: "Road transport is the dominant mode for domestic cargo movement in Pakistan, handling the bulk of commercial freight between cities. The country's goods transport fleet operates under the National Logistics Policy and NHMP dimensional rules, with heavy transport vehicles subject to a 90 km/h motorway speed limit and strict overloading checks — a crackdown on overcharging and overloading was renewed in March 2026. For commercial cargo clients, the practical implication is that legitimate operators with weight-compliant vehicles complete moves on schedule, while under-documented operators face delays at motorway checkposts. PK Transporters operates with full road documentation, transparent freight pricing, and vehicles calibrated to the legal axle load requirements for each route.",
     keywords: ["road cargo Pakistan", "truck freight Karachi", "commercial road transport Pakistan", "FTL road cargo Pakistan"],
     industries: ["Wholesale distributors", "Building material companies", "Food and commodity traders", "Industrial raw material buyers", "Retail chain distribution teams"],
     process: [
@@ -497,11 +512,12 @@ export const services: Service[] = [
     title: "Customs Clearance",
     eyebrow: "Port documentation",
     summary: "Customs clearance coordination for import/export shipments with document readiness, cargo release support, and final-mile delivery planning.",
+    description: "Pakistan Customs processes import declarations through WeBOC (Web-Based One Customs), assigning each shipment a risk channel: Green (automated release, fastest), Yellow (document review), or Red (physical examination, slowest). Standard clearance takes 2–5 working days; Red Channel examination adds 1–3 days. The government has proposed reducing free container days at ports from 5 to 3 days for Green and Yellow channel cargo to reduce congestion, making pre-arrival filing — submitting the goods declaration before the vessel berths — more important than ever for cost-conscious importers. PK Transporters coordinates with licensed clearing agents on HS code accuracy, pre-arrival GD filing, duty calculation, and examination readiness to keep clearance timelines as short as possible.",
     keywords: ["customs clearance Pakistan", "customs agent Karachi", "import customs clearance Pakistan", "FBR customs documentation Karachi"],
     industries: ["Importers with direct port shipments", "Exporters needing clearance coordination", "Trading companies", "Pharmaceutical importers", "Machinery and equipment buyers"],
     process: [
       "Receive shipping documents: bill of lading, commercial invoice, packing list, and GD draft",
-      "File goods declaration (GD) with FBR and Pakistan Customs authority",
+      "File goods declaration (GD) with FBR and Pakistan Customs through WeBOC",
       "Pay applicable import duties and handle examination or scanning if required",
       "Obtain cargo release order and coordinate port container pickup and inland transport"
     ],
@@ -515,15 +531,15 @@ export const services: Service[] = [
     faqs: [
       {
         question: "What documents are required for customs clearance in Pakistan?",
-        answer: "Standard import clearance requires a commercial invoice, packing list, bill of lading (or air waybill), goods declaration, and any commodity-specific permits such as SROs or regulatory authority approvals."
+        answer: "Standard import clearance requires a commercial invoice, packing list, bill of lading (or air waybill), goods declaration filed through WeBOC, and any commodity-specific permits such as SROs, PSQCA approvals, or DRAP certificates where applicable."
       },
       {
         question: "How long does customs clearance take at Karachi Port?",
-        answer: "Standard import clearance takes 2 to 5 working days. Pre-arrival documentation filing and green-channel clearance can reduce this. Examination or scanning adds 1 to 3 additional days."
+        answer: "Standard import clearance takes 2 to 5 working days under the WeBOC system. Green Channel clearance (no inspection) is fastest. Yellow Channel adds a document review stage. Red Channel physical examination adds 1 to 3 additional days. Pakistan Customs is targeting a reduction to under 48 hours for Green and Yellow channel cargo."
       },
       {
         question: "Can you handle clearance for regulated or restricted commodities?",
-        answer: "Yes, with advance notice and proper documentation. Regulated commodities such as food, pharmaceuticals, chemicals, and machinery require permits from the relevant regulatory authority before clearance."
+        answer: "Yes, with advance notice and proper documentation. Regulated commodities such as food, pharmaceuticals, chemicals, and machinery require permits from PSQCA, DRAP, or other relevant regulatory authorities before clearance can proceed."
       }
     ]
   },
@@ -532,6 +548,7 @@ export const services: Service[] = [
     title: "Warehousing & Distribution",
     eyebrow: "Storage and dispatch",
     summary: "Warehousing and distribution support for commercial inventory, import cargo staging, export consolidation, and route-based dispatch.",
+    description: "Port-adjacent warehousing in Karachi serves two primary functions: staging import cargo between port release and upcountry dispatch, and consolidating export cargo before container stuffing and port delivery. The alternative to warehousing — leaving a container at the port — triggers demurrage charges that compound daily once free days expire. With Karachi Port targeting a reduction of the free period from 5 days to 3 days for Green and Yellow channel cargo, importers who arrange warehouse staging for upcountry shipments reduce their exposure to these costs. PK Transporters offers short-term and medium-term storage near the port, with inbound trailer delivery, inventory management, and multi-drop distribution to buyers across Pakistan.",
     keywords: ["warehousing Pakistan", "cargo storage Karachi", "distribution warehouse Pakistan", "import cargo staging Karachi port"],
     industries: ["Importers with staged delivery needs", "Exporters consolidating shipments", "FMCG distributors", "E-commerce fulfilment teams", "Seasonal inventory businesses"],
     process: [
@@ -550,7 +567,7 @@ export const services: Service[] = [
     faqs: [
       {
         question: "Do you offer short-term warehouse storage for import cargo?",
-        answer: "Yes. Short-term and medium-term storage is available for import cargo that needs to be staged before final delivery, with port-adjacent options to minimise secondary transport costs."
+        answer: "Yes. Short-term and medium-term storage is available for import cargo that needs to be staged before final delivery, with port-adjacent options to minimise secondary transport costs and avoid port demurrage."
       },
       {
         question: "Can you manage distribution from a warehouse to multiple delivery points?",
@@ -567,6 +584,7 @@ export const services: Service[] = [
     title: "Karachi Port Logistics",
     eyebrow: "Karachi priority",
     summary: "Karachi port logistics for container pickup, cargo release coordination, port-to-warehouse moves, and nationwide dispatch.",
+    description: "Karachi Port is Pakistan's busiest maritime gateway, handling 2.65 million TEUs and 54 million tons of total cargo in FY2024–25 — its highest annual throughput on record. The port received 1,943 vessels during the year, of which 1,093 were container ships. Its main container terminals — KICT (Karachi International Container Terminal) and PICT (Pakistan International Container Terminal) — operate 24 hours a day. The most common bottleneck is not the terminal itself but the documentation gap between vessel arrival and customs clearance: importers who file the goods declaration through WeBOC before the vessel berths consistently achieve faster release than those who begin documentation after arrival. PK Transporters coordinates pre-arrival prep to keep gate-out timelines tight.",
     keywords: ["Karachi port logistics", "KICT container services", "PICT cargo handling Karachi", "port logistics company Karachi"],
     industries: ["Direct port importers", "Shipping lines", "CFS and CY operators", "Freight forwarders", "Export cargo teams"],
     process: [
@@ -589,7 +607,7 @@ export const services: Service[] = [
       },
       {
         question: "How do you coordinate cargo release at Karachi Port?",
-        answer: "The team aligns with your clearing agent on gate pass readiness, container release status, and terminal slot timing to ensure trailer availability matches the cargo release window."
+        answer: "The team aligns with your clearing agent on gate pass readiness, container release status through WeBOC, and terminal slot timing to ensure trailer availability matches the cargo release window."
       },
       {
         question: "Can you arrange port-to-warehouse moves on short notice?",
@@ -602,6 +620,7 @@ export const services: Service[] = [
     title: "Port Qasim Logistics",
     eyebrow: "Port Qasim cargo",
     summary: "Port Qasim logistics for industrial importers, automotive suppliers, bulk-adjacent container cargo, and inland delivery routes.",
+    description: "Port Qasim, located approximately 35–45 km east of central Karachi along the Korangi Creek, is Pakistan's second major deep-water port and the preferred gateway for automotive imports, fertilisers, bulk liquids, steel, and industrial raw materials. Its main container terminal, QICT (Qasim International Container Terminal), handles FCL containers alongside bulk and liquid berths at FOTCO and other facilities. The port's industrial corridor — connecting directly to the SITE and Korangi industrial zones — makes it well-suited for heavy industrial cargo that would otherwise transit through central Karachi traffic to reach these zones from the city port. PK Transporters is established at QICT and FOTCO gate procedures with trailers based to serve the Port Qasim catchment.",
     keywords: ["Port Qasim logistics", "QICT container transport", "Port Qasim cargo Pakistan", "industrial port logistics Karachi"],
     industries: ["Automotive parts importers", "Steel and chemical importers", "Power sector cargo teams", "Bulk commodity handlers", "Industrial equipment buyers"],
     process: [
@@ -620,11 +639,11 @@ export const services: Service[] = [
     faqs: [
       {
         question: "What terminals operate at Port Qasim?",
-        answer: "Port Qasim's main container facilities are QICT (Qasim International Container Terminal) and FOTCO. Additional bulk liquid, fertiliser, and general cargo berths serve non-containerized commodities."
+        answer: "Port Qasim's main container facilities are QICT (Qasim International Container Terminal) and FOTCO. Additional bulk liquid, fertiliser, and general cargo berths serve non-containerized commodities including automotive vehicles, chemicals, and steel."
       },
       {
         question: "Is Port Qasim better for industrial cargo than Karachi Port?",
-        answer: "Port Qasim serves automotive, chemical, fertiliser, and bulk-adjacent container cargo. Karachi Port handles a higher volume of general containerized trade. The preferred port depends on shipping line allocation and cargo type."
+        answer: "Port Qasim serves automotive, chemical, fertiliser, and bulk-adjacent container cargo. Karachi Port handles a higher volume of general containerized trade. The preferred port is typically determined by shipping line allocation, though cargo type can influence the choice."
       },
       {
         question: "How far is Port Qasim from central Karachi?",
@@ -637,6 +656,7 @@ export const services: Service[] = [
     title: "Afghanistan Transit Cargo",
     eyebrow: "Transit cargo",
     summary: "Afghanistan transit cargo coordination through Pakistan with documentation alignment, road movement planning, and border-route visibility.",
+    description: "The Afghanistan Pakistan Transit Trade Agreement (APTTA) governs all commercial cargo transiting Pakistan destined for Afghanistan, requiring bonded carrier vehicles, transit bond guarantees, and specific commodity compliance to prevent cargo diversion. Pakistan is Afghanistan's primary import corridor, with the Chaman–Kandahar route (via Quetta) and the Torkham–Jalalabad route (via Peshawar) as the two main road arteries. Transit cargo enters through Karachi Port or Port Qasim, is placed under customs bond at the port, and moves under NHMP escort where required to the border crossing point. NLC (National Logistics Corporation) operates bonded trucks on these routes, and PK Transporters coordinates with both NLC and private bonded carriers to move Afghanistan-bound containers from Karachi to Chaman or Torkham.",
     keywords: ["Afghanistan transit cargo Pakistan", "APTTA transit Karachi", "Afghanistan border cargo Pakistan", "transit freight Pakistan Afghanistan"],
     industries: ["Afghan importers using Pakistan routes", "Transit trade companies", "Forwarding agents with Afghan clients", "APTTA registered carriers", "Cross-border trading businesses"],
     process: [
@@ -655,7 +675,7 @@ export const services: Service[] = [
     faqs: [
       {
         question: "What is APTTA and how does it apply to Afghanistan transit cargo?",
-        answer: "The Afghanistan Pakistan Transit Trade Agreement (APTTA) governs transit cargo moved through Pakistan to Afghanistan. It requires specific bonded carrier vehicles, transit declarations, and commodity restrictions to prevent cargo diversion."
+        answer: "The Afghanistan Pakistan Transit Trade Agreement (APTTA) governs transit cargo moved through Pakistan to Afghanistan. It requires specific bonded carrier vehicles, transit declarations, and commodity restrictions to prevent cargo diversion at the border."
       },
       {
         question: "Which border crossings do you use for Afghanistan transit?",
@@ -672,6 +692,7 @@ export const services: Service[] = [
     title: "Industrial Cargo Movement",
     eyebrow: "Factory logistics",
     summary: "Industrial cargo movement for textile mills, manufacturers, suppliers, project sites, and production-critical deliveries.",
+    description: "Pakistan's industrial base — concentrated in Karachi's SITE, Korangi, and Landhi zones, Lahore's Sundar and Kot Lakhpat estates, and Faisalabad's textile industrial parks — generates continuous demand for inbound raw materials and outbound finished goods. Textile mills, steel plants, pharmaceutical manufacturers, and food processing factories all depend on coordinated vehicle dispatch aligned to shift timings and production cycles. A missed delivery of raw material to a textile mill running export orders on a vessel cut-off deadline has direct financial consequences. PK Transporters provides standing dispatch arrangements for factories with regular cargo volumes and coordinates port-to-factory inbound delivery with the same scheduling discipline applied to export container movements.",
     keywords: ["industrial cargo transport Pakistan", "factory logistics Pakistan", "manufacturing cargo movement", "plant equipment transport Pakistan"],
     industries: ["Textile mills", "Steel and metal plants", "Pharmaceutical manufacturers", "Food processing factories", "Chemical and polymer plants"],
     process: [
@@ -707,6 +728,7 @@ export const services: Service[] = [
     title: "Textile Industry Logistics",
     eyebrow: "Exporter support",
     summary: "Textile logistics for exporters, mills, garment suppliers, and shipment teams moving raw material, finished goods, and export containers.",
+    description: "Pakistan's textile sector is the country's largest export industry, generating $17.887 billion in FY2024–25 — a 7.39% year-on-year increase — and accounting for 55.83% of total national exports. The sector spans cotton yarn, fabric, knitwear, garments, home textiles, and made-ups, exported predominantly to the EU, US, UK, and Gulf markets. Every export shipment begins with a container placement at a factory or approved stuffing point, loading against a vessel booking, and delivery to the port before the shipping line's cargo cut-off. PK Transporters specialises in this export container cycle for mills in Karachi, Faisalabad, Sialkot, Lahore, and Gujranwala — with priority scheduling built around vessel sailing dates.",
     keywords: ["textile logistics Pakistan", "export container textile Karachi", "garment freight Pakistan", "textile cargo transport Lahore"],
     industries: ["Garment exporters", "Yarn and fabric mills", "Knitwear manufacturers", "Home textile exporters", "Textile trading companies"],
     process: [
@@ -729,7 +751,7 @@ export const services: Service[] = [
       },
       {
         question: "Which textile production cities do you cover?",
-        answer: "Textile logistics coverage includes Karachi, Lahore, Faisalabad, Sialkot, Gujranwala, and surrounding textile manufacturing zones — both for port delivery and inbound raw material transport."
+        answer: "Textile logistics coverage includes Karachi, Lahore, Faisalabad, Sialkot, Gujranwala, and surrounding textile manufacturing zones — both for port delivery and inbound raw material transport. Pakistan's textile exports of $17.887 billion in FY2024–25 come primarily from these production hubs."
       },
       {
         question: "Can you handle multiple export containers weekly for high-volume textile exporters?",
@@ -742,6 +764,7 @@ export const services: Service[] = [
     title: "Import Export Logistics",
     eyebrow: "Trade logistics",
     summary: "Import export logistics for companies that need forwarding, customs, inland transport, warehousing, and container movement under one plan.",
+    description: "Pakistan's trade flows — 2.65 million TEUs inbound and outbound through Karachi Port in FY2024–25, against a backdrop of $17.887 billion in textile exports and significant machinery, chemical, and consumer goods imports — require coordinated management across customs, inland transport, and documentation. A fragmented supply chain where the importer manages the clearing agent, the logistics company, and the warehouse operator separately creates unnecessary hand-off risk. PK Transporters provides a single-contact model for the full import or export cycle: forwarding coordination, WeBOC customs clearance, container dray, and warehouse or factory delivery managed as one process rather than three separate vendor relationships.",
     keywords: ["import export logistics Pakistan", "trade logistics Karachi", "full service freight Pakistan", "import logistics company Pakistan"],
     industries: ["Import trading companies", "Export houses", "Buying agents", "Retail importers", "Industrial equipment traders"],
     process: [
@@ -760,7 +783,7 @@ export const services: Service[] = [
     faqs: [
       {
         question: "Can you manage the full import process from port arrival to warehouse delivery?",
-        answer: "Yes. Services cover port release coordination, customs clearance, container dray, and warehouse or factory delivery as a single managed process."
+        answer: "Yes. Services cover port release coordination through WeBOC, customs clearance, container dray, and warehouse or factory delivery as a single managed process."
       },
       {
         question: "Do you work with both small importers and high-volume trade accounts?",
@@ -781,12 +804,13 @@ export const cityPages: CityPage[] = [
     city: "Karachi",
     focus: "logistics company Karachi",
     summary: "PK Transporters operates as a logistics company in Karachi with direct access to Karachi Port, Port Qasim, and the city's major industrial zones including SITE, Korangi, and Landhi. The operation serves importers, exporters, factories, and shipping agencies moving container cargo through the port and across Pakistan.",
+    body: "Karachi is Pakistan's commercial capital and the entry point for the majority of the country's containerized trade. Karachi Port processed 2.65 million TEUs and 54 million tons of total cargo in FY2024–25 — its highest annual throughput on record — across 1,943 vessel calls. The city's industrial zones fan outward from the port: SITE to the northwest, Korangi to the east, and Landhi and Bin Qasim further along the coastal corridor. PK Transporters operates within this network daily, coordinating container moves from KICT, PICT, and Port Qasim terminals to factory gates, warehouses, and dry port facilities, and dispatching inland trailers to Lahore, Islamabad, Faisalabad, and other major cities from the Karachi base.",
     industrialZones: ["SITE Industrial Area", "Korangi Industrial Area", "Landhi Industrial Area", "Port Qasim Industrial Zone", "North Karachi Industrial Area"],
     routes: ["Karachi Port to SITE Industrial Area", "Port Qasim to Korangi", "Karachi to Lahore", "Karachi to Islamabad/Rawalpindi"],
     faqs: [
       {
         question: "What logistics services are available in Karachi?",
-        answer: "PK Transporters provides container transport, port haulage, freight forwarding, customs clearance coordination, road cargo, warehousing, and nationwide inland delivery from Karachi Port and Port Qasim."
+        answer: "PK Transporters provides container transport, port haulage, freight forwarding, customs clearance coordination through WeBOC, road cargo, warehousing, and nationwide inland delivery from Karachi Port and Port Qasim."
       },
       {
         question: "Which industrial areas in Karachi do you serve?",
@@ -808,6 +832,7 @@ export const cityPages: CityPage[] = [
     city: "Karachi",
     focus: "container transport Karachi",
     summary: "Container transport in Karachi connects Karachi Port and Port Qasim to factories, warehouses, dry ports, and commercial hubs across the city and nationwide. PK Transporters covers FCL container pickups, port haulage, factory deliveries, and inland dispatch from Karachi to the national highway network.",
+    body: "Container transport within Karachi involves coordinating port gate procedures at KICT, PICT, or QICT, aligning with customs clearance timelines under WeBOC, and routing containers to industrial zones spread across a city of over 20 million people. Traffic in Karachi is heaviest during morning peak hours, making dispatch timing a practical variable that experienced operators plan around. The government's current initiative to reduce container dwell time at Karachi Port from 3–6 days to under 48 hours means importers who prepare documentation before vessel arrival and have a confirmed haulier will have a significant edge over those who begin both steps after the ship berths. For upcountry shipments, Karachi serves as the dispatch point for Pakistan's longest freight corridors: Karachi–Lahore (1,200 km) and Karachi–Islamabad (1,400 km).",
     industrialZones: ["SITE Industrial Area", "Korangi Industrial Area", "Landhi Industrial Area", "Port Qasim Industrial Zone", "North Karachi Industrial Area"],
     routes: ["Karachi Port to Lahore", "Port Qasim to Islamabad", "Karachi to Faisalabad", "Karachi to Rawalpindi"],
     faqs: [
@@ -835,16 +860,17 @@ export const cityPages: CityPage[] = [
     city: "Karachi",
     focus: "freight forwarding Karachi",
     summary: "Freight forwarding in Karachi involves carrier booking, bill of lading coordination, customs clearance, and inland delivery management for import and export cargo. PK Transporters supports Karachi-based traders, manufacturers, and shipping agencies with end-to-end forwarding coordination through both Karachi Port and Port Qasim.",
+    body: "Karachi handles the bulk of Pakistan's international trade documentation burden. Every import container that arrives at Karachi Port or Port Qasim must be cleared through WeBOC, with the clearing agent filing a goods declaration under the correct HS code, paying assessed import duties through the banking system, and obtaining a release order before the gate pass is issued. For export cargo, shipping instructions must be submitted to the shipping line before the vessel's document cut-off — typically 24–48 hours before the cargo cut-off. Pakistan's textile exports from Karachi alone represent a large share of the $17.887 billion the sector earned in FY2024–25, each shipment requiring accurate BL documentation aligned to buyer purchase orders and letter of credit terms. PK Transporters coordinates each of these steps with licensed clearing agents and shipping line representatives.",
     industrialZones: ["SITE Industrial Area", "Korangi Industrial Area", "Landhi Industrial Area", "Port Qasim Industrial Zone", "Karachi Export Processing Zone"],
     routes: ["Karachi Port to Lahore", "Port Qasim to upcountry", "Karachi to Faisalabad textile corridor", "Karachi export to Middle East and Europe"],
     faqs: [
       {
         question: "What does freight forwarding in Karachi cover?",
-        answer: "Freight forwarding from Karachi includes carrier booking, bill of lading coordination, customs export or import filing with FBR, port release management, and inland transport to the final destination."
+        answer: "Freight forwarding from Karachi includes carrier booking, bill of lading coordination, customs export or import filing through WeBOC, port release management, and inland transport to the final destination."
       },
       {
         question: "Which shipping lines operate through Karachi for freight forwarding?",
-        answer: "Karachi Port and Port Qasim are served by major global shipping lines covering Middle East, Far East, European, and North American trade lanes. Carrier selection depends on sailing schedule and available space."
+        answer: "Karachi Port and Port Qasim are served by major global shipping lines covering Middle East, Far East, European, and North American trade lanes. Karachi Port received 1,093 container vessels in FY2024–25. Carrier selection depends on sailing schedule and available space."
       },
       {
         question: "Do you handle export freight forwarding for textile shipments from Karachi?",
@@ -862,12 +888,13 @@ export const cityPages: CityPage[] = [
     city: "Lahore",
     focus: "logistics company Lahore",
     summary: "PK Transporters supports Lahore-based businesses with container deliveries from Karachi Port, export container coordination for textile and industrial exporters, and freight management for cargo arriving at Lahore Dry Port. Active delivery zones include the Sundar Industrial Estate, Quaid-e-Azam Industrial Estate, Kot Lakhpat, and the Raiwind Road industrial corridor.",
+    body: "Lahore is Pakistan's second-largest commercial city and the hub of the Punjab industrial belt. The city is approximately 1,200 km from Karachi Port via the National Highway and M-2 motorway — a 2–3 day transit by container trailer. Lahore Dry Port (Mughalpura Inland Container Terminal, MICT) allows importers to clear customs in Lahore under a bond transfer from the seaport, avoiding the Karachi clearance bottleneck. The city's textile industry — centred in Sundar, Kot Lakhpat, and the Raiwind Road corridor — is a major contributor to Pakistan's $17.887 billion textile export total in FY2024–25. PK Transporters serves Lahore with both inbound import container delivery and outbound export container placement for factory stuffing, with scheduling aligned to vessel cut-off deadlines at Karachi Port.",
     industrialZones: ["Sundar Industrial Estate", "Quaid-e-Azam Industrial Estate", "Kot Lakhpat", "Raiwind Road Industrial Corridor"],
     routes: ["Karachi to Lahore", "Lahore to Karachi Port", "Lahore to Islamabad/Rawalpindi commercial belt", "Lahore dry port to factory"],
     faqs: [
       {
         question: "Do you provide container transport from Karachi to Lahore?",
-        answer: "Yes. Karachi to Lahore is a primary route, with 20ft and 40ft container transport via the National Highway and M-2 motorway corridor."
+        answer: "Yes. Karachi to Lahore is a primary route, with 20ft and 40ft container transport via the National Highway and M-2 motorway corridor, covering approximately 1,200 km in 2–3 days."
       },
       {
         question: "Which industrial areas in Lahore do you deliver to?",
@@ -879,7 +906,7 @@ export const cityPages: CityPage[] = [
       },
       {
         question: "What is the transit time from Karachi to Lahore by road?",
-        answer: "Road transit from Karachi Port to Lahore typically takes 2 to 3 days for container transport depending on dispatch timing and delivery point."
+        answer: "Road transit from Karachi Port to Lahore typically takes 2 to 3 days for container transport depending on dispatch timing and delivery point access."
       }
     ]
   },
@@ -889,6 +916,7 @@ export const cityPages: CityPage[] = [
     city: "Lahore",
     focus: "container transport Lahore",
     summary: "Container transport to and from Lahore runs primarily on the Karachi–Lahore National Highway and M-2 motorway, one of Pakistan's busiest freight corridors. PK Transporters handles 20ft and 40ft container deliveries to Lahore factories, warehouses, and dry port facilities, as well as empty container placement for export stuffing.",
+    body: "The Karachi–Lahore freight corridor is the busiest container route in Pakistan, carrying a large share of the country's total inland container movements. Road freight on this corridor reached approximately Rs14,000 per ton in April 2026 following a 40% increase in rates due to rising diesel costs — a figure that makes per-container economics a live concern for importers and exporters alike. NHMP enforces a 90 km/h speed limit for heavy transport vehicles on the M-2 motorway and conducts regular weight-bridge checks; compliant operators who load within legal axle limits avoid the fines and delays that affect overloaded vehicles at motorway checkposts. PK Transporters covers the full Lahore container cycle: import delivery from Karachi Port to factory or dry port, and export container placement for return to port before vessel cut-off.",
     industrialZones: ["Sundar Industrial Estate", "Quaid-e-Azam Industrial Estate", "Kot Lakhpat", "Raiwind Road Industrial Corridor"],
     routes: ["Karachi Port to Lahore", "Lahore dry port to factory gate", "Lahore to Islamabad cargo corridor", "Lahore to Faisalabad industrial belt"],
     faqs: [
@@ -916,12 +944,13 @@ export const cityPages: CityPage[] = [
     city: "Islamabad",
     focus: "logistics company Islamabad",
     summary: "Islamabad's logistics demand is shaped by government procurement, CPEC-linked cargo, and commercial imports for the twin-city market of Rawalpindi and Islamabad. PK Transporters delivers container cargo from Karachi Port to Islamabad's I-9 and I-10 industrial areas and manages freight for businesses in the federal capital and surrounding trade zones.",
+    body: "Islamabad and Rawalpindi together form Pakistan's twin-city capital region with a combined population exceeding 5 million, generating consistent demand for imported consumer goods, industrial supplies, and government procurement cargo. The city sits at the northern terminus of the M-2 motorway, approximately 1,400 km by road from Karachi Port — a 3–5 day container transit. CPEC infrastructure investment has added a significant layer of project cargo to the region, including construction equipment, electrical materials, and industrial plant for special economic zones and energy projects along the corridor. Pakistan has completed 38 of approximately 90 CPEC projects as of 2026, with ongoing construction maintaining demand for heavy cargo logistics in and around the federal capital.",
     industrialZones: ["I-9 Industrial Area", "I-10 Industrial Area", "Kahuta Road industrial corridor", "Rawat Industrial Area"],
     routes: ["Karachi to Islamabad", "Islamabad to Karachi Port", "Islamabad to Rawalpindi commercial belt", "Islamabad to Lahore cargo corridor"],
     faqs: [
       {
         question: "Do you provide container transport from Karachi to Islamabad?",
-        answer: "Yes. Karachi to Islamabad container transport covers the 1,400 km route via National Highway and M-2/M-1 motorway, typically taking 3 to 5 days."
+        answer: "Yes. Karachi to Islamabad container transport covers the approximately 1,400 km route via National Highway and M-2/M-1 motorway, typically taking 3 to 5 days."
       },
       {
         question: "Which industrial areas in Islamabad do you serve?",
@@ -929,7 +958,7 @@ export const cityPages: CityPage[] = [
       },
       {
         question: "Can you handle cargo for CPEC-related projects in or near Islamabad?",
-        answer: "Yes. CPEC-linked industrial and infrastructure cargo is within the scope of services, including project cargo and equipment transport to relevant sites."
+        answer: "Yes. CPEC-linked industrial and infrastructure cargo is within the scope of services, including project cargo and equipment transport to relevant sites. Pakistan has completed 38 of approximately 90 CPEC projects as of 2026."
       },
       {
         question: "Do you manage freight for government or institutional cargo in Islamabad?",
@@ -943,12 +972,13 @@ export const cityPages: CityPage[] = [
     city: "Islamabad",
     focus: "container transport Islamabad",
     summary: "Container transport to Islamabad covers a road route of approximately 1,400 km from Karachi Port via the National Highway and motorway network. PK Transporters manages 20ft and 40ft container deliveries to Islamabad and Rawalpindi commercial zones, coordinating port release, trailer dispatch, and factory or warehouse delivery.",
+    body: "Container deliveries to Islamabad travel one of Pakistan's most important freight arteries: the National Highway from Karachi north through Sukkur and Multan, joining the M-2 motorway to Lahore and then the M-1 into Islamabad. NHMP maintains active checkposts along this route, enforcing the 90 km/h heavy vehicle speed limit and weight-bridge compliance; overloaded or under-documented vehicles are held until the issue is resolved. For Islamabad-based importers, the 3–5 day transit from Karachi Port makes document readiness at the port end the biggest variable — containers cleared quickly under WeBOC Green Channel dispatch significantly faster than those held for Red Channel examination. NLC's dry port at Islamabad offers an alternative clearance point for importers who prefer upcountry customs processing.",
     industrialZones: ["I-9 Industrial Area", "I-10 Industrial Area", "Rawat Industrial Area", "Kahuta Road industrial corridor"],
     routes: ["Karachi Port to Islamabad", "Islamabad to Rawalpindi twin-city belt", "Islamabad to Lahore cargo corridor", "Islamabad to Peshawar commercial route"],
     faqs: [
       {
         question: "What is the transit time for container transport from Karachi to Islamabad?",
-        answer: "Karachi to Islamabad container transport typically takes 3 to 5 days by road depending on dispatch timing, route, and delivery point."
+        answer: "Karachi to Islamabad container transport typically takes 3 to 5 days by road covering approximately 1,400 km, depending on dispatch timing, route, and delivery point."
       },
       {
         question: "Can containers be delivered to both Islamabad and Rawalpindi on the same move?",
@@ -970,12 +1000,13 @@ export const cityPages: CityPage[] = [
     city: "Rawalpindi",
     focus: "logistics company Rawalpindi",
     summary: "Rawalpindi is an active commercial hub adjacent to Islamabad, with high cargo demand along the Saddar commercial belt, Chakri Road, and GT Road industrial corridor. PK Transporters serves Rawalpindi businesses with container deliveries, road cargo, and freight coordination from Karachi Port.",
+    body: "Rawalpindi's commercial activity is closely linked to its neighbour Islamabad, and the two cities effectively share a logistics catchment area. The GT Road (Grand Trunk Road, N-5) running through Rawalpindi has been a primary freight artery for centuries and remains heavily used for commercial cargo moving between Punjab and the northwest. Rawalpindi is also a gateway to Peshawar and Khyber Pakhtunkhwa, making it a distribution node for cargo destined beyond the Potohar Plateau. Container deliveries from Karachi Port to Rawalpindi cover approximately 1,400 km in 3–5 days. Road freight rates on this corridor reached approximately Rs14,000 per ton in April 2026 — making freight budgeting and confirmed pricing before dispatch a standard practice for commercial buyers.",
     industrialZones: ["Rawat Industrial Area", "Saddar commercial belt", "Chakri Road industrial corridor", "GT Road cargo corridor"],
     routes: ["Karachi to Rawalpindi", "Rawalpindi to Islamabad twin-city", "Rawalpindi to Lahore cargo route", "GT Road corridor freight"],
     faqs: [
       {
         question: "Do you provide container transport from Karachi to Rawalpindi?",
-        answer: "Yes. Karachi to Rawalpindi container transport via the national highway and motorway network is available for 20ft and 40ft containers."
+        answer: "Yes. Karachi to Rawalpindi container transport via the national highway and motorway network is available for 20ft and 40ft containers, covering approximately 1,400 km in 3–5 days."
       },
       {
         question: "Which areas of Rawalpindi do you serve?",
@@ -997,6 +1028,7 @@ export const cityPages: CityPage[] = [
     city: "Rawalpindi",
     focus: "container trailer Rawalpindi",
     summary: "Container trailer services to Rawalpindi connect Karachi Port through the GT Road and motorway freight corridor. PK Transporters places 20ft and 40ft trailers for Rawalpindi businesses needing port-to-gate delivery, factory stuffing for export, or warehouse receipt of import cargo.",
+    body: "Container trailers serving the Rawalpindi corridor travel the full length of Pakistan's national highway and motorway system — departing Karachi Port via the M-9 motorway, joining the National Highway north through Sindh and southern Punjab, then the M-2 to Lahore and onward to Rawalpindi. NHMP weight-bridge checkposts operate along this corridor, and heavy transport vehicles are subject to a maximum motorway speed of 90 km/h and strict axle load limits under the National Highways and Motorways (Dimensions of Goods Transport Vehicles) Rules 2017. PK Transporters dispatches weight-compliant container trailers with full documentation for each move, ensuring no hold-ups at motorway checkposts that would delay delivery to Rawalpindi factories, warehouses, or commercial premises.",
     industrialZones: ["Rawat Industrial Area", "Saddar commercial belt", "Chakri Road industrial corridor", "GT Road cargo corridor"],
     routes: ["Karachi Port to Rawalpindi", "Rawalpindi to Karachi Port for export", "Rawalpindi to Islamabad twin-city delivery", "GT Road to Lahore corridor"],
     faqs: [
@@ -1010,7 +1042,7 @@ export const cityPages: CityPage[] = [
       },
       {
         question: "What is the cost of container trailer transport from Karachi to Rawalpindi?",
-        answer: "Freight rates depend on container size, cargo weight, and route timing. Request a quote with your container size and delivery address for a specific estimate."
+        answer: "Freight rates depend on container size, cargo weight, and route timing. Road freight on the Karachi–Rawalpindi corridor reached approximately Rs14,000 per ton in April 2026. Request a quote with your container size and delivery address for a specific estimate."
       },
       {
         question: "Can container trailers continue from Rawalpindi to Peshawar?",
@@ -1085,19 +1117,19 @@ export const blogPosts: BlogPost[] = [
     sections: [
       {
         heading: "What container transport covers",
-        content: "Container transport in Pakistan refers to the movement of ISO shipping containers — primarily 20ft and 40ft units — from port terminals to factories, warehouses, dry ports, or retail distribution points. The chain begins when a cargo release is confirmed at Karachi Port or Port Qasim and ends when the container is handed over at the consignee's gate. Between those two points sit trailer assignment, gate-out from the terminal, customs coordination, route planning, and delivery documentation. Each step must sequence correctly for the move to work on time."
+        content: "Container transport in Pakistan refers to the movement of ISO shipping containers — primarily 20ft and 40ft units — from port terminals to factories, warehouses, dry ports, or retail distribution points. Karachi Port handled 2.65 million TEUs in FY2024–25 — its highest annual throughput — across 1,093 container vessel calls. The transport chain begins when a cargo release is confirmed at Karachi Port or Port Qasim and ends when the container is handed over at the consignee's gate. Between those two points sit trailer assignment, gate-out from the terminal, customs coordination through WeBOC, route planning, and delivery documentation. Each step must sequence correctly for the move to work on time."
       },
       {
         heading: "The Karachi port release process",
-        content: "Before a container can leave the port, several conditions must be met. The shipping line must confirm the original bill of lading or telex release. Customs clearance must be completed through the WeBOC system, with the goods declaration assessed and duties paid. The terminal issues a gate pass once these conditions are satisfied. A container transport company then assigns a chassis trailer and coordinates the terminal slot for container pickup. Importers who prepare documentation before the vessel arrives — pre-arrival filing — move significantly faster through this stage."
+        content: "Before a container can leave the port, several conditions must be met. The shipping line must confirm the original bill of lading or telex release. Customs clearance must be completed through the WeBOC system, with the goods declaration assessed and duties paid. Pakistan Customs assigns each shipment a risk channel: Green (automated release, fastest), Yellow (document review), or Red (physical examination, slowest). Standard clearance takes 2–5 working days; Red Channel adds 1–3 days. The government is targeting a reduction of average dwell time to under 48 hours for Green and Yellow channel cargo. Importers who prepare documentation before the vessel arrives — pre-arrival filing — move significantly faster through this stage and avoid paying extra detention once free days expire."
       },
       {
         heading: "Route planning from port to destination",
-        content: "Pakistan's main container freight corridors run from Karachi Port and Port Qasim northward along the National Highway (N-55) and the M-9 motorway connecting to the M-2, which links Karachi to Lahore and onward to Islamabad. Karachi to Lahore is approximately 1,200 km and takes 2 to 3 days by road. Karachi to Islamabad is approximately 1,400 km and takes 3 to 5 days. Transit time depends on cargo weight, vehicle condition, weather, and delivery point access. Industrial zones in Faisalabad, Sialkot, and Gujranwala are served via secondary routes from the Lahore interchange."
+        content: "Pakistan's main container freight corridors run from Karachi Port and Port Qasim northward along the National Highway (N-55) and the M-9 motorway connecting to the M-2, which links Karachi to Lahore and onward to Islamabad. Karachi to Lahore is approximately 1,200 km and takes 2 to 3 days by road. Karachi to Islamabad is approximately 1,400 km and takes 3 to 5 days. Road freight on the Karachi–Lahore corridor reached approximately Rs14,000 per ton in April 2026 following diesel price increases. NHMP enforces a 90 km/h speed limit for heavy transport vehicles on motorways and 65 km/h on highways, with active overloading enforcement at checkposts. Industrial zones in Faisalabad, Sialkot, and Gujranwala are served via secondary routes from the Lahore interchange."
       },
       {
         heading: "Common bottlenecks and how to avoid them",
-        content: "Port detention charges accumulate quickly when containers are not picked up promptly after free days expire. The most common causes are incomplete customs documentation, late duty payment, and no trailer availability on the day of release. Importers who brief their clearing agent before the vessel arrives, confirm trailer booking in advance, and share the container release as soon as it is confirmed minimise delays. On the road, overloaded containers at weight bridges and missing challan documentation are the most frequent causes of hold-ups. A logistics company that operates with weight compliance from the start avoids these costs."
+        content: "Port detention charges accumulate quickly when containers are not picked up promptly after free days expire. The most common causes are incomplete customs documentation, late duty payment, and no trailer availability on the day of release. Importers who brief their clearing agent before the vessel arrives, confirm trailer booking in advance, and share the container release as soon as it is confirmed minimise delays. The government's proposal to reduce the free period from 5 days to 3 days for Green and Yellow channel containers — to reduce port congestion — makes pre-arrival preparation even more important. On the road, overloaded containers at weight bridges and missing challan documentation are the most frequent causes of hold-ups. A logistics company that operates with weight compliance from the start avoids these costs entirely."
       }
     ]
   },
@@ -1110,19 +1142,19 @@ export const blogPosts: BlogPost[] = [
     sections: [
       {
         heading: "Karachi Port and Port Qasim: what is the difference",
-        content: "Karachi handles a higher volume of general containerized cargo including consumer goods, textiles, chemicals, and foodstuffs. Its main container terminals are KICT (Karachi International Container Terminal) and PICT (Pakistan International Container Terminal). Port Qasim, located approximately 40 km east of central Karachi, is the preferred port for automotive imports, fertilisers, bulk liquids, and industrial raw materials. QICT is the main container facility there. The choice of port is typically determined by the shipping line's port of call rather than the importer, though cargo type and route can influence this."
+        content: "Karachi Port is Pakistan's primary container gateway, processing 2.65 million TEUs and 54 million tons of total cargo in FY2024–25 — its highest annual throughput on record across 1,943 vessel calls. It handles general containerized cargo including consumer goods, textiles, chemicals, and foodstuffs. Its main container terminals are KICT (Karachi International Container Terminal) and PICT (Pakistan International Container Terminal). Port Qasim, located approximately 40 km east of central Karachi, is the preferred port for automotive imports, fertilisers, bulk liquids, and industrial raw materials. QICT is the main container facility there. The choice of port is typically determined by the shipping line's port of call, though cargo type and buyer preference can influence this."
       },
       {
         heading: "The container release sequence at Karachi Port",
-        content: "Container release at Karachi Port follows a defined sequence: arrival notice from the shipping line, submission of the bill of lading or sea waybill, goods declaration filing through WeBOC, customs assessment and duty payment, and finally the issuance of a gate pass. For Green Channel cargo, no physical examination is required and release is faster. Yellow Channel triggers document review. Red Channel means physical examination, which adds time. Pre-arrival filing — submitting the goods declaration before the vessel berths — is the single most effective way to accelerate this sequence."
+        content: "Container release at Karachi Port follows a defined sequence: arrival notice from the shipping line, submission of the bill of lading or sea waybill, goods declaration filing through WeBOC, customs channel assignment (Green, Yellow, or Red), assessment and duty payment, and finally the issuance of a gate pass. For Green Channel cargo, no physical examination is required and release is fastest. Yellow Channel triggers document review. Red Channel means physical examination, adding 1–3 days. The government has finalised recommendations to reduce container dwell time — currently averaging 3–6 days — to under 48 hours, including proposals for AI-based risk profiling and around-the-clock customs operations. Pre-arrival filing — submitting the goods declaration before the vessel berths — is the single most effective way to accelerate this sequence."
       },
       {
         heading: "Container dray and haulage from the terminal",
-        content: "Once a gate pass is issued, a container trailer is assigned and sent to the terminal. The driver presents the gate pass, weighs the container at the port weight bridge, collects the container unit, and exits through the gate. Port gate queues are longest in the early morning. Many experienced logistics operators time pickups for mid-morning to reduce wait time. From gate-out, the container is transported directly to the consignee's facility or to a warehouse, CFS, or dry port for intermediate storage or consolidation."
+        content: "Once a gate pass is issued, a container trailer is assigned and sent to the terminal. The driver presents the gate pass, weighs the container at the port weight bridge, collects the container unit, and exits through the gate. Port gate queues are longest in the early morning. Many experienced logistics operators time pickups for mid-morning to reduce wait time. From gate-out, the container is transported directly to the consignee's facility or to a warehouse, CFS, or dry port for intermediate storage. The National Logistics Corporation (NLC) operates dry ports at Lahore (MICT), Quetta, Hyderabad, and Karachi — providing inland clearance points for importers who prefer upcountry customs processing."
       },
       {
         heading: "Inland dispatch from Karachi: key corridors",
-        content: "The Karachi–Lahore corridor is the busiest freight route in Pakistan. Most long-haul container moves from Karachi use the M-9 motorway from the port to the National Highway and then M-2 to Lahore. For shorter moves within Karachi, industrial zones in SITE, Korangi, and Landhi are all accessible within 1 to 2 hours from both ports under normal traffic conditions. Port Qasim to SITE typically takes longer due to urban traffic between the two areas. Planning dispatch times to avoid morning peak traffic in Karachi reduces unnecessary delay at the port end."
+        content: "The Karachi–Lahore corridor is the busiest freight route in Pakistan. Most long-haul container moves from Karachi use the M-9 motorway from the port to the National Highway and then M-2 to Lahore. Road freight on this corridor reached approximately Rs14,000 per ton in April 2026. For shorter moves within Karachi, industrial zones in SITE, Korangi, and Landhi are all accessible within 1 to 2 hours from both ports under normal traffic conditions. NHMP enforces 90 km/h motorway and 65 km/h highway speed limits for heavy transport vehicles, and overloading crackdowns were intensified in early 2026 — operators with weight-compliant documentation experience no disruption at checkposts."
       }
     ]
   },
@@ -1135,19 +1167,19 @@ export const blogPosts: BlogPost[] = [
     sections: [
       {
         heading: "Internal dimensions and cargo capacity",
-        content: "A standard 20ft container has internal dimensions of approximately 5.9m long, 2.35m wide, and 2.39m high, giving a volume of around 33 cubic metres. It carries a maximum cargo weight of roughly 22,000 kg. A standard 40ft container is approximately 12.03m long with the same width and height, giving around 67 cubic metres of internal space and a cargo weight capacity of approximately 26,500 kg. The 40ft High Cube adds an extra 30cm of internal height (2.69m) for a total volume of around 76 cubic metres, which is useful for bulky but lighter cargo like garments, mattresses, or large packaged goods."
+        content: "A standard 20ft container has internal dimensions of approximately 5.9m long, 2.35m wide, and 2.39m high, giving a volume of around 33 cubic metres and a maximum cargo weight of roughly 22,000 kg. A standard 40ft container is approximately 12.03m long with the same width and height, giving around 67 cubic metres of internal space and a cargo weight capacity of approximately 26,500 kg. The 40ft High Cube adds an extra 30 cm of internal height (2.69m) for a total volume of around 76 cubic metres — useful for bulky but lighter cargo like garments, mattresses, or large packaged goods. Pakistan's textile sector, which exported $17.887 billion in FY2024–25, relies heavily on 40ft HC containers for bale and garment shipments."
       },
       {
         heading: "When to use a 20ft container",
-        content: "A 20ft container is the right choice for heavy, dense cargo where you reach the weight limit before filling the volume. Steel coils, machinery parts, bagged chemicals, and heavy industrial goods often fill a 20ft container by weight well before running out of space. It is also the standard choice for FCL shipments with smaller volumes — typically 15 to 25 CBM of cargo. For Pakistan importers receiving machinery, raw materials, or industrial components in modest quantities, the 20ft unit is the most common container type."
+        content: "A 20ft container is the right choice for heavy, dense cargo where you reach the weight limit before filling the volume. Steel coils, machinery parts, bagged chemicals, and heavy industrial goods often fill a 20ft container by weight well before running out of space. It is also the standard choice for FCL shipments with smaller volumes — typically 15 to 25 CBM of cargo. For Pakistan importers receiving machinery, raw materials, or industrial components in modest quantities, the 20ft unit is the most common container type arriving at Karachi Port and Port Qasim. The port handled 2.65 million TEUs in FY2024–25, a large proportion of which were 20ft units carrying dense industrial imports."
       },
       {
         heading: "When to use a 40ft container",
-        content: "A 40ft container suits high-volume, low-density cargo where the volume fills before the weight limit is reached. Textile bales, garments, packaged consumer goods, furniture, and foam products are typical 40ft commodities. Pakistan's textile export sector relies heavily on 40ft and 40ft HC containers because large volumes of fabric, knitwear, and garments need the extra length to load efficiently. For retail import cargo with multiple SKUs of lightweight goods, the 40ft container provides more flexibility in loading and consolidation."
+        content: "A 40ft container suits high-volume, low-density cargo where the volume fills before the weight limit is reached. Textile bales, garments, packaged consumer goods, furniture, and foam products are typical 40ft commodities. Pakistan's textile export sector relies heavily on 40ft and 40ft HC containers because large volumes of fabric, knitwear, and garments need the extra length to load efficiently. For retail import cargo with multiple SKUs of lightweight goods, the 40ft container provides more flexibility in loading and consolidation. Road freight rates for a 40ft container from Karachi to Lahore are typically 1.5–1.7 times the rate for a 20ft container — not twice the price — meaning cost-per-CBM is lower on the larger unit when the volume is available."
       },
       {
         heading: "Cost comparison: 20ft vs 40ft freight rates",
-        content: "In most markets, a 40ft container does not cost twice the freight of a 20ft container — it is typically 1.4 to 1.7 times the price. This means that if your cargo can fill a 40ft unit, the cost per CBM or per tonne is significantly lower than using two 20ft containers. For Pakistan importers and exporters, using the correct container size is not just a space question but a direct cost-per-unit consideration. Request a freight estimate for both options if your cargo volume is close to the boundary of a 20ft capacity, typically around 25 to 28 CBM, to compare the actual landed cost difference."
+        content: "In Pakistan, a 40ft container does not cost twice the freight of a 20ft container — it is typically 1.4 to 1.7 times the price. With road freight on the Karachi–Lahore corridor at approximately Rs14,000 per ton (April 2026), the cost per CBM on a full 40ft container is materially lower than running two separate 20ft units. This means that if your cargo can fill a 40ft unit, the cost per CBM or per tonne is significantly lower. For Pakistan importers and exporters, using the correct container size is not just a space question but a direct cost-per-unit consideration. Request a freight estimate for both options if your cargo volume is close to the boundary of a 20ft capacity — typically around 25 to 28 CBM — to compare the actual landed cost difference."
       }
     ]
   },
@@ -1160,19 +1192,19 @@ export const blogPosts: BlogPost[] = [
     sections: [
       {
         heading: "What a freight forwarder actually does",
-        content: "A freight forwarder acts as the coordinator between the shipper, the shipping line or airline, the customs authority, and the inland transport provider. The forwarder does not usually own ships or planes — they book space on behalf of the client, manage the documentation chain, and ensure the cargo moves from origin to destination with the correct paperwork at each stage. In Pakistan, this role is especially important for importers who are unfamiliar with WeBOC, FBR customs filing, or shipping line documentation requirements, and for exporters who need to manage export GDs, shipping instructions, and BL issuance against tight vessel cut-offs."
+        content: "A freight forwarder acts as the coordinator between the shipper, the shipping line or airline, the customs authority, and the inland transport provider. The forwarder does not usually own ships or planes — they book space on behalf of the client, manage the documentation chain, and ensure the cargo moves from origin to destination with the correct paperwork at each stage. In Pakistan, this role is especially important for importers unfamiliar with WeBOC, FBR customs filing, or shipping line documentation requirements, and for exporters who need to manage export GDs, shipping instructions, and BL issuance against tight vessel cut-offs. Karachi Port received 1,093 container vessels in FY2024–25, each requiring careful documentation coordination on both import and export sides."
       },
       {
         heading: "Key documents in the forwarding process",
-        content: "The core documents in a Pakistan import forwarding cycle are the bill of lading (BL) or sea waybill, the commercial invoice, the packing list, the goods declaration (GD) filed through WeBOC, and any commodity-specific permits from relevant authorities such as PSQCA, DRAP, or the Ministry of Commerce. For exports, the equivalent documents are the shipping instructions submitted to the shipping line, the export GD, the certificate of origin (if required by the importing country), and the BL issued by the shipping line after the vessel sails. The forwarder is responsible for ensuring these documents are accurate, complete, and submitted within deadlines."
+        content: "The core documents in a Pakistan import forwarding cycle are the bill of lading (BL) or sea waybill, the commercial invoice, the packing list, the goods declaration (GD) filed through WeBOC, and any commodity-specific permits from relevant authorities such as PSQCA, DRAP, or the Ministry of Commerce. For exports, the equivalent documents are the shipping instructions submitted to the shipping line, the export GD, the certificate of origin (if required by the importing country), and the BL issued by the shipping line after the vessel sails. Pakistan's textile exports — $17.887 billion in FY2024–25 — require accurate BL documentation aligned to buyer purchase orders and letter of credit terms on every single shipment. The forwarder is responsible for ensuring these documents are accurate, complete, and submitted within deadlines."
       },
       {
         heading: "The customs clearance step",
-        content: "In Pakistan, import customs clearance is managed through WeBOC (Web-Based One Customs). The clearing agent files the goods declaration with the correct HS code, declared value, and quantity. Pakistan Customs then assesses the GD and assigns a risk channel: Green (no inspection, fast), Yellow (document review), or Red (physical examination). Duties and taxes are paid through the banking system and confirmed before the gate pass is issued. This step can take 2 to 5 days for standard cargo and longer for regulated commodities or Red Channel examinations. Pre-arrival filing is the most effective way to compress this timeline."
+        content: "In Pakistan, import customs clearance is managed through WeBOC (Web-Based One Customs). The clearing agent files the goods declaration with the correct HS code, declared value, and quantity. Pakistan Customs then assigns a risk channel: Green (no inspection, fast), Yellow (document review), or Red (physical examination). Duties and taxes are paid through the banking system and confirmed before the gate pass is issued. Standard clearance takes 2–5 working days; Red Channel examination adds 1–3 days. The government's proposals include AI-based risk profiling of importers and 24-hour operations for customs assessments and examinations to reduce the current 3–6 day average dwell time to under 48 hours. Pre-arrival filing is the most effective way to compress this timeline under the current system."
       },
       {
         heading: "From port release to final delivery",
-        content: "Once customs clearance is complete and the gate pass is issued, the container is handed to an inland transport provider — either arranged directly by the forwarder or by a separate logistics company. The trailer picks up the container from the terminal, exits through the port gate, and is routed to the consignee's facility. For cargo destined for Lahore, Islamabad, or other upcountry cities, transit times are 2 to 5 days. For Karachi-based consignees, city moves are completed the same day. The forwarder typically coordinates proof of delivery and ensures the container is returned to the shipping line within the free days allowed to avoid detention charges."
+        content: "Once customs clearance is complete and the gate pass is issued, the container is handed to an inland transport provider. The trailer picks up the container from the terminal, exits through the port gate, and is routed to the consignee's facility. For cargo destined for Lahore (1,200 km), transit is 2–3 days; for Islamabad (1,400 km), 3–5 days. For Karachi-based consignees, city moves are completed the same day. Road freight rates on the Karachi–Lahore corridor reached approximately Rs14,000 per ton in April 2026 — a figure importers should factor into total landed cost calculations. The forwarder coordinates proof of delivery and ensures the container is returned to the shipping line within the free days allowed to avoid detention charges."
       }
     ]
   },
@@ -1185,19 +1217,19 @@ export const blogPosts: BlogPost[] = [
     sections: [
       {
         heading: "Port experience vs general transport",
-        content: "There is a meaningful difference between a general road transport company and a logistics company with Karachi port operating experience. Port operations require knowledge of terminal gate procedures, gate pass coordination, container release timing, and the documentation requirements of specific terminals such as KICT, PICT, and QICT. A company without this experience will book a trailer and arrive at the gate without the correct documentation, wasting a full day of the importer's free time. Ask directly whether the company has operated at the specific terminal your cargo will be released from."
+        content: "There is a meaningful difference between a general road transport company and a logistics company with Karachi port operating experience. Port operations require knowledge of terminal gate procedures, gate pass coordination, container release timing through WeBOC, and the documentation requirements of specific terminals such as KICT, PICT, and QICT. Karachi Port processed 2.65 million TEUs in FY2024–25 across 1,093 container vessels — a high-volume environment where a company without terminal experience will book a trailer and arrive at the gate without the correct documentation, wasting a full day of the importer's free time. Ask directly whether the company has operated at the specific terminal your cargo will be released from."
       },
       {
         heading: "Fleet and equipment questions to ask",
-        content: "Find out whether the company operates its own trailers or brokers capacity from third-party owners. Brokered capacity is not inherently worse, but it introduces a layer of dependency on driver availability and vehicle condition. Ask what container sizes the fleet covers: 20ft, 40ft, and 40ft High Cube are the most important for most importers. If your cargo requires low-bed or flatbed equipment, confirm that it is available. For regular import volumes, a company that can commit to standing trailer availability on specific days is more valuable than one that books ad-hoc."
+        content: "Find out whether the company operates its own trailers or brokers capacity from third-party owners. Brokered capacity is not inherently worse, but it introduces dependency on driver availability and vehicle condition. Ask what container sizes the fleet covers: 20ft, 40ft, and 40ft High Cube are the most important for most importers. If your cargo requires low-bed or flatbed equipment, confirm that it is available. NHMP regulations require goods transport vehicles to comply with axle load limits under the National Highways and Motorways (Dimensions of Goods Transport Vehicles) Rules 2017 — a company operating overloaded vehicles will face checkpost delays that push your delivery timeline. Ask specifically how the company manages weight compliance."
       },
       {
         heading: "Documentation and customs coordination",
-        content: "A logistics company that understands customs documentation — or works closely with a clearing agent — will significantly reduce your stress during the clearance stage. The company should understand the difference between Green, Yellow, and Red channel examinations, know how to prepare for a re-examination request, and be able to advise on pre-arrival GD filing to speed up release. If they cannot explain WeBOC, cannot advise on HS code selection, and have no relationship with a licensed clearing agent, their involvement ends at the port gate — leaving you to manage the most complex part of the import process alone."
+        content: "A logistics company that understands customs documentation — or works closely with a clearing agent — will significantly reduce your stress during the clearance stage. The company should understand the difference between Green, Yellow, and Red channel examinations under WeBOC, know how to prepare for a re-examination request, and be able to advise on pre-arrival GD filing to speed up release. The government is targeting a reduction of container dwell time at Karachi Port to under 48 hours from the current 3–6 days — making pre-arrival preparation and fast customs coordination even more valuable. If the logistics company cannot explain WeBOC and has no relationship with a licensed clearing agent, their involvement ends at the port gate."
       },
       {
         heading: "Freight estimate transparency",
-        content: "A serious logistics company provides a freight estimate that breaks down transportation cost, any applicable fuel surcharge, and destination charges before the cargo moves. Vague pricing with hidden charges revealed after delivery is a common complaint with smaller operators. The estimate should specify the container size, route, and any conditions that may change the price such as overweight charges or remote delivery surcharges. Request the estimate in writing before confirming. A company that provides a clear, itemised estimate and explains the conditions upfront is demonstrating the same operational clarity you should expect across the entire shipment."
+        content: "A serious logistics company provides a freight estimate that breaks down transportation cost, any applicable fuel surcharge, and destination charges before the cargo moves. With road freight on the Karachi–Lahore corridor at approximately Rs14,000 per ton as of April 2026 — following a 40% rate increase driven by diesel price rises — the gap between a low initial quote and the actual invoice can be significant if fuel surcharges are not disclosed upfront. The estimate should specify the container size, route, and any conditions that may change the price such as overweight charges or remote delivery surcharges. A company that provides a clear, itemised estimate in writing and explains the conditions upfront is demonstrating the same operational clarity you should expect across the entire shipment."
       }
     ]
   }
