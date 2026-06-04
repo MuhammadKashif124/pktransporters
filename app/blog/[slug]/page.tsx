@@ -1,51 +1,168 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import type { Metadata } from "next";
+import { getAllBlogPostSlugs, getBlogPostBySlug, getBlogPostContentWithHtml } from "@/lib/blog-posts";
+import { addHeadingIds, extractHeadings, estimateReadingTime } from "@/lib/blog-utils";
+import { TableOfContents } from "@/components/blog/TableOfContents";
+import { BlogPostMeta } from "@/components/blog/BlogPostMeta";
+import { ShareButtons } from "@/components/blog/ShareButtons";
 import { JsonLd } from "@/components/seo/json-ld";
-import { blogPosts } from "@/lib/content";
-import { articleSchema, breadcrumbSchema } from "@/lib/schema";
-import { createMetadata } from "@/lib/site";
+import { articleSchema } from "@/lib/schema";
+import { absoluteUrl } from "@/lib/utils";
 
-export const revalidate = 3600;
+const PLACEHOLDER = "/images/blog/welcome.jpg";
+const SITE_NAME = "PK Transporters";
 
-export function generateStaticParams() {
-  return blogPosts.map((post) => ({ slug: post.slug }));
+export async function generateStaticParams() {
+  return getAllBlogPostSlugs().map((slug) => ({ slug }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
   const { slug } = await params;
-  const post = blogPosts.find((item) => item.slug === slug);
+  const post = getBlogPostBySlug(slug);
   if (!post) return {};
-  return createMetadata({ title: `${post.title} | PK Transporters Guide`, description: post.excerpt, path: `/blog/${post.slug}` });
+  const url = absoluteUrl(`/blog/${slug}`);
+  return {
+    title: { absolute: post.seoTitle || `${post.title} | ${SITE_NAME}` },
+    description: post.seoDescription || post.excerpt,
+    robots: {
+      index: post.noindex === true ? false : true,
+      follow: post.nofollow === true ? false : true,
+    },
+    openGraph: {
+      type: "article",
+      publishedTime: post.date,
+      authors: [post.author],
+      images:
+        post.featuredImage && post.featuredImage !== PLACEHOLDER
+          ? [{ url: post.featuredImage, width: 1200, height: 630 }]
+          : [],
+    },
+    alternates: { canonical: url },
+  };
 }
 
-export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function BlogPostPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const { slug } = await params;
-  const post = blogPosts.find((item) => item.slug === slug);
+  const post = getBlogPostBySlug(slug);
   if (!post) notFound();
+
+  const rawHtml = await getBlogPostContentWithHtml(slug);
+  const contentHtml = addHeadingIds(rawHtml);
+  const tocItems = extractHeadings(contentHtml);
+  const readingTime = estimateReadingTime(contentHtml);
+  const pageUrl = absoluteUrl(`/blog/${slug}`);
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") },
+      { "@type": "ListItem", position: 2, name: "Blog", item: absoluteUrl("/blog") },
+      { "@type": "ListItem", position: 3, name: post.title, item: pageUrl },
+    ],
+  };
+
   return (
-    <article className="section-pad bg-white">
+    <article>
       <JsonLd data={articleSchema(post)} />
-      <JsonLd data={breadcrumbSchema([{ name: "Home", url: "/" }, { name: "Blog", url: "/blog" }, { name: post.title, url: `/blog/${post.slug}` }])} />
-      <div className="mx-auto max-w-3xl px-4">
-        <p className="font-bold text-accent">Logistics guide</p>
-        <h1 className="mt-4 text-4xl font-black md:text-6xl">{post.title}</h1>
-        <p className="mt-3 text-sm text-muted-foreground">
-          By {post.author} &middot;{" "}
-          {new Date(post.publishedAt).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}
-        </p>
-        <p className="mt-5 text-lg leading-8 text-muted-foreground">{post.excerpt}</p>
-        <div className="prose prose-slate mt-10 max-w-none">
-          {post.sections.map((section) => (
-            <div key={section.heading}>
-              <h2>{section.heading}</h2>
-              <p>{section.content}</p>
-            </div>
-          ))}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
+      {/* Hero */}
+      <div className="pk-post-hero">
+        <div className="pk-post-hero-inner">
+          <nav className="pk-post-breadcrumb">
+            <Link href="/">Home</Link>
+            <span>/</span>
+            <Link href="/blog">Blog</Link>
+            <span>/</span>
+            <span>{post.title}</span>
+          </nav>
+          <h1 className="mt-4 text-3xl font-black text-white md:text-5xl">{post.title}</h1>
+          <BlogPostMeta post={post} readingTime={readingTime} />
         </div>
-        <Button asChild className="mt-10" size="lg">
-          <Link href="/get-quote">Request a freight estimate</Link>
-        </Button>
+      </div>
+
+      {/* Featured image */}
+      {post.featuredImage && post.featuredImage !== PLACEHOLDER && (
+        <div className="mx-auto max-w-5xl px-4">
+          <div className="pk-post-cover">
+            <Image
+              src={post.featuredImage}
+              alt={post.title}
+              fill
+              className="pk-post-cover-img object-cover"
+              sizes="(max-width: 768px) 100vw, 1024px"
+              priority
+            />
+          </div>
+        </div>
+      )}
+
+      {/* YouTube embed */}
+      {post.youtubeId && (
+        <div className="mx-auto max-w-5xl px-4 mt-8">
+          <div className="pk-youtube">
+            <iframe
+              src={`https://www.youtube.com/embed/${post.youtubeId}`}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              title={post.title}
+            />
+          </div>
+        </div>
+      )}
+
+      {/* Layout: content + TOC sidebar */}
+      <div className="mx-auto max-w-5xl px-4 pb-20">
+        <div className="pk-post-layout">
+          <div>
+            <div
+              className="blog-content"
+              dangerouslySetInnerHTML={{ __html: contentHtml }}
+            />
+
+            {/* Tags */}
+            {post.tags && post.tags.length > 0 && (
+              <div className="pk-post-tags mt-10">
+                {post.tags.map((tag) => (
+                  <span key={tag} className="pk-post-tag">#{tag}</span>
+                ))}
+              </div>
+            )}
+
+            <ShareButtons title={post.title} url={pageUrl} />
+
+            <div className="mt-10 border-t pt-8">
+              <p className="text-sm text-muted-foreground">
+                Written by <strong>{post.author}</strong>
+              </p>
+            </div>
+
+            <div className="mt-8">
+              <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-bold text-accent hover:underline">
+                ← Back to blog
+              </Link>
+            </div>
+          </div>
+
+          {/* TOC sidebar */}
+          <aside>
+            <TableOfContents items={tocItems} />
+          </aside>
+        </div>
       </div>
     </article>
   );

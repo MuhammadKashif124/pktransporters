@@ -1,0 +1,618 @@
+{
+  "_readme": "Content queue for PK Transporters blog. Strategy: B2B buyers — importers, manufacturers, distributors — needing FCL container transport from Karachi to Punjab, KPK, Islamabad, Balochistan. Excluding Sindh destination content. Priority 1 = write first.",
+  "_strategy": {
+    "primary_intent": "Commercial / transactional — buyers who need container transport now or are comparing vendors",
+    "audience": "Purchasing managers, supply chain leads, import/export directors at mid-to-large businesses in Lahore, Faisalabad, Islamabad, Rawalpindi, Peshawar, Multan, Sialkot, Gujranwala",
+    "geographic_focus": "Karachi (origin port) → Punjab + KPK + Islamabad + Balochistan destinations. No Sindh destination content.",
+    "funnel_mix": "60% commercial intent (clusters 1+2), 25% decision-stage (cluster 3), 15% awareness/trust (cluster 4)",
+    "existing_posts_status": "needs-rewrite — content is thin paragraph-per-section, no tables, no real buyer value"
+  },
+
+  "clusters": [
+    {
+      "id": "karachi-to-city-routes",
+      "name": "Karachi to [City] Container Transport",
+      "rationale": "Highest commercial intent in the niche. Buyers searching for a specific route need one definitive article. Each article targets a different destination city outside Sindh with route-specific transit times, rates, industrial zones, and documentation context. These act as landing pages in editorial format.",
+      "seo_notes": "Estimated 300–1,200 searches/mo per city pair in Pakistan. Competition is extremely low — almost no logistics company in PK has route-specific content at depth. Fast-ranking cluster.",
+      "articles": [
+        {
+          "slug": "container-transport-karachi-to-lahore",
+          "title": "Container Transport from Karachi to Lahore: Rates, Routes & Transit Times",
+          "target_keyword": "container transport Karachi to Lahore",
+          "secondary_keywords": ["Karachi Lahore freight", "20ft container Karachi Lahore", "40ft container Lahore delivery", "container trailer Karachi Lahore rate"],
+          "intent": "commercial",
+          "priority": 1,
+          "status": "planned",
+          "word_count_target": 1800,
+          "notes": "Highest-volume route. Lead with actual rate context (Rs14,000/ton April 2026), 2–3 day transit via M-9 → N-55 → M-2. Cover 20ft vs 40ft, industries served (textile mills, FMCG, pharma), documentation needed. Rate table by city + container size."
+        },
+        {
+          "slug": "container-transport-karachi-to-faisalabad",
+          "title": "Container Transport from Karachi to Faisalabad: Textile & Industrial Cargo",
+          "target_keyword": "container transport Karachi to Faisalabad",
+          "secondary_keywords": ["Karachi Faisalabad freight", "container trailer Faisalabad", "textile cargo Faisalabad", "industrial cargo Faisalabad"],
+          "intent": "commercial",
+          "priority": 1,
+          "status": "planned",
+          "word_count_target": 1700,
+          "notes": "Pakistan textile capital. Target textile mills, yarn/chemical importers. ~1,350 km via M-3. 3–4 days. Cover Millat Road, Jaranwala Road, FIEDMC industrial zones."
+        },
+        {
+          "slug": "container-transport-karachi-to-islamabad",
+          "title": "Container Transport from Karachi to Islamabad: Full Guide for Importers",
+          "target_keyword": "container transport Karachi to Islamabad",
+          "secondary_keywords": ["Karachi Islamabad freight", "container trailer Islamabad", "import delivery Islamabad", "FCL container Islamabad"],
+          "intent": "commercial",
+          "priority": 1,
+          "status": "planned",
+          "word_count_target": 1700,
+          "notes": "Corporate importers, government procurement, CPEC businesses. ~1,400 km via M-2/M-1, 3–5 days. I-9/I-10 industrial zones, NLC dry port option."
+        },
+        {
+          "slug": "container-transport-karachi-to-rawalpindi",
+          "title": "Container Transport from Karachi to Rawalpindi",
+          "target_keyword": "container transport Karachi to Rawalpindi",
+          "secondary_keywords": ["Rawalpindi container freight", "Karachi Rawalpindi trailer", "container delivery Rawalpindi", "GT Road cargo"],
+          "intent": "commercial",
+          "priority": 2,
+          "status": "planned",
+          "word_count_target": 1500,
+          "notes": "Twin-city with Islamabad. GT Road corridor. Rawat Industrial Area, Chakri Road, Saddar. Same route as Islamabad, differentiate by industrial/commercial character."
+        },
+        {
+          "slug": "container-transport-karachi-to-multan",
+          "title": "Container Transport from Karachi to Multan",
+          "target_keyword": "container transport Karachi to Multan",
+          "secondary_keywords": ["Multan container freight", "Karachi Multan trailer", "container delivery Multan", "Multan industrial cargo"],
+          "intent": "commercial",
+          "priority": 2,
+          "status": "planned",
+          "word_count_target": 1500,
+          "notes": "Agricultural commodities, cotton processing, ceramics, solar equipment. ~1,100 km via M-5. 2–3 days. Underserved market — emphasise fewer good options for Multan buyers."
+        },
+        {
+          "slug": "container-transport-karachi-to-peshawar",
+          "title": "Container Transport from Karachi to Peshawar",
+          "target_keyword": "container transport Karachi to Peshawar",
+          "secondary_keywords": ["Karachi Peshawar freight", "container trailer Peshawar", "KPK container transport", "Peshawar import delivery"],
+          "intent": "commercial",
+          "priority": 2,
+          "status": "planned",
+          "word_count_target": 1500,
+          "notes": "KPK gateway + Afghanistan transit trade. ~1,700 km via M-1, 4–5 days. Hayatabad Industrial Estate, Ring Road zones. APTTA angle."
+        },
+        {
+          "slug": "container-transport-karachi-to-sialkot",
+          "title": "Container Transport from Karachi to Sialkot: Export & Import Cargo",
+          "target_keyword": "container transport Karachi to Sialkot",
+          "secondary_keywords": ["Sialkot container freight", "sports goods export logistics", "surgical instruments logistics Sialkot", "container trailer Sialkot"],
+          "intent": "commercial",
+          "priority": 2,
+          "status": "planned",
+          "word_count_target": 1500,
+          "notes": "Sports goods, surgical instruments, leather exports. Both inbound raw material imports and export container placement. Sialkot Dry Port clearance. ~1,250 km. Tight vessel cut-off schedules."
+        },
+        {
+          "slug": "container-transport-karachi-to-gujranwala",
+          "title": "Container Transport from Karachi to Gujranwala",
+          "target_keyword": "container transport Karachi to Gujranwala",
+          "secondary_keywords": ["Gujranwala container freight", "container trailer Gujranwala", "industrial cargo Gujranwala"],
+          "intent": "commercial",
+          "priority": 3,
+          "status": "planned",
+          "word_count_target": 1400,
+          "notes": "Fans, furniture, ceramics, steel pipes. Near Lahore (~80 km). Often underserved — address that directly."
+        },
+        {
+          "slug": "container-transport-karachi-to-quetta",
+          "title": "Container Transport from Karachi to Quetta",
+          "target_keyword": "container transport Karachi to Quetta",
+          "secondary_keywords": ["Quetta container freight", "Karachi Quetta logistics", "Balochistan container transport", "Quetta import delivery"],
+          "intent": "commercial",
+          "priority": 2,
+          "status": "planned",
+          "word_count_target": 1500,
+          "notes": "Quetta: gateway to Balochistan, construction materials, fuel, food commodities, CPEC projects. Also Afghan transit via Chaman. ~700 km via N-25/RCD Highway, 1–2 days. Note NHMP escort requirements for some cargo."
+        },
+        {
+          "slug": "container-transport-karachi-to-gujrat",
+          "title": "Container Transport from Karachi to Gujrat",
+          "target_keyword": "container transport Karachi to Gujrat",
+          "secondary_keywords": ["Gujrat container freight", "container trailer Gujrat", "furniture export Gujrat logistics"],
+          "intent": "commercial",
+          "priority": 3,
+          "status": "planned",
+          "word_count_target": 1400,
+          "notes": "Gujrat: furniture, electrical goods, industrial goods. Between Lahore and Islamabad corridor. ~1,250 km, 2–3 days. Often grouped with Gujranwala/Sialkot supply chain."
+        },
+        {
+          "slug": "container-transport-karachi-to-sargodha",
+          "title": "Container Transport from Karachi to Sargodha",
+          "target_keyword": "container transport Karachi to Sargodha",
+          "secondary_keywords": ["Sargodha container freight", "container delivery Sargodha", "Sargodha industrial logistics"],
+          "intent": "commercial",
+          "priority": 3,
+          "status": "planned",
+          "word_count_target": 1400,
+          "notes": "Sargodha: agriculture hub (citrus), flour mills, textile, ceramic tiles. ~1,250 km. Growing commercial base, few logistics competitors writing content for this market."
+        },
+        {
+          "slug": "container-transport-karachi-to-bahawalpur",
+          "title": "Container Transport from Karachi to Bahawalpur",
+          "target_keyword": "container transport Karachi to Bahawalpur",
+          "secondary_keywords": ["Bahawalpur container freight", "container trailer Bahawalpur", "southern Punjab container logistics"],
+          "intent": "commercial",
+          "priority": 3,
+          "status": "planned",
+          "word_count_target": 1400,
+          "notes": "Bahawalpur: southern Punjab, cotton ginning, agriculture, solar projects, Cholistan industrial zone. ~900 km via M-5/M-4, 2 days. Underserved market with few logistics content competitors."
+        }
+      ]
+    },
+
+    {
+      "id": "industry-verticals",
+      "name": "Container Logistics for [Industry]",
+      "rationale": "Vertical-specific content converts better than generic logistics content because it speaks the buyer's language. A textile mill procurement manager has different concerns than a pharma distributor. These articles build topical authority and capture mid-funnel searches by industry.",
+      "seo_notes": "100–500 searches/mo per article but much higher conversion intent. Internal linking hub: each vertical links to relevant route articles and WhatsApp CTA.",
+      "articles": [
+        {
+          "slug": "container-transport-for-textile-exporters-pakistan",
+          "title": "Container Transport for Textile Exporters in Pakistan: Complete Operations Guide",
+          "target_keyword": "container transport textile exporters Pakistan",
+          "secondary_keywords": ["textile export container Lahore", "fabric container logistics Pakistan", "export cut-off management", "textile FCL Pakistan"],
+          "intent": "commercial",
+          "priority": 1,
+          "status": "planned",
+          "word_count_target": 2000,
+          "notes": "Pakistan textile $17.887B FY24–25. Full export cycle: empty container placement → factory stuffing → port delivery before cut-off → BL documentation. Vessel cut-off pressure, HC vs standard 40ft for garments, Faisalabad/Lahore/Sialkot specifics. Real checklist."
+        },
+        {
+          "slug": "pharmaceutical-cargo-transport-karachi",
+          "title": "Pharmaceutical Cargo Transport from Karachi: Cold Chain and Dry Cargo Guide",
+          "target_keyword": "pharmaceutical cargo transport Pakistan",
+          "secondary_keywords": ["cold chain logistics Pakistan", "pharma container transport", "DRAP documentation logistics", "medicine cargo Karachi Lahore"],
+          "intent": "commercial",
+          "priority": 2,
+          "status": "planned",
+          "word_count_target": 1600,
+          "notes": "Pakistan pharma market ~$5.5B. DRAP permit docs, reefer vs ambient, WeBOC clearance for pharma commodities, Lahore/Islamabad pharma distribution hubs."
+        },
+        {
+          "slug": "fmcg-container-distribution-pakistan",
+          "title": "FMCG Container Distribution from Karachi: Import Logistics for Consumer Goods",
+          "target_keyword": "FMCG container distribution Pakistan",
+          "secondary_keywords": ["consumer goods container import Pakistan", "FMCG logistics Karachi", "retail distribution container Pakistan"],
+          "intent": "commercial",
+          "priority": 2,
+          "status": "planned",
+          "word_count_target": 1600,
+          "notes": "Retail chains, FMCG brands, wholesale distributors. Port-to-warehouse-to-RDC flow, multi-drop from single container, seasonal volume (Ramadan/Eid). Reliability + visibility = top priorities."
+        },
+        {
+          "slug": "machinery-import-container-transport-pakistan",
+          "title": "Machinery Import Container Transport from Karachi: Plant & Equipment Guide",
+          "target_keyword": "machinery import container transport Pakistan",
+          "secondary_keywords": ["industrial machinery container Pakistan", "equipment import logistics Karachi", "factory machinery transport", "CPEC equipment transport"],
+          "intent": "commercial",
+          "priority": 2,
+          "status": "planned",
+          "word_count_target": 1600,
+          "notes": "Capital equipment buyers: textile machinery, CNC machines, generators, food processing equipment. Out-of-gauge packing, wooden crating risks, crane unloading, CPEC Chinese machinery supply chains."
+        },
+        {
+          "slug": "steel-raw-materials-container-transport-pakistan",
+          "title": "Steel and Raw Materials Container Transport from Karachi",
+          "target_keyword": "steel container transport Pakistan",
+          "secondary_keywords": ["raw material container logistics Pakistan", "steel import transport Karachi", "industrial raw materials freight"],
+          "intent": "commercial",
+          "priority": 3,
+          "status": "planned",
+          "word_count_target": 1500,
+          "notes": "Steel, chemicals, polymers. Weight compliance is critical (steel fills 20ft by weight at ~18T). Payload planning, weight bridge documentation, Lahore/Faisalabad/Gujranwala mill delivery."
+        },
+        {
+          "slug": "automotive-parts-import-logistics-karachi",
+          "title": "Automotive Parts Import Logistics from Karachi: Container Transport Guide",
+          "target_keyword": "automotive parts import logistics Pakistan",
+          "secondary_keywords": ["car parts container import Karachi", "automotive logistics Pakistan", "vehicle parts freight Pakistan", "auto parts import Karachi port"],
+          "intent": "commercial",
+          "priority": 2,
+          "status": "planned",
+          "word_count_target": 1600,
+          "notes": "Pakistan auto sector: 250,000+ vehicles/year. Parts importers, assemblers (Lahore, Karachi), Port Qasim QICT is primary terminal for auto imports. Covers: CBU vs CKD container differences, Port Qasim auto terminal, engineering goods SRO documentation, delivery to Lahore assembler facilities."
+        },
+        {
+          "slug": "construction-materials-container-transport-pakistan",
+          "title": "Construction Materials Container Transport from Karachi: CPEC & Property Sector",
+          "target_keyword": "construction materials container transport Pakistan",
+          "secondary_keywords": ["building materials logistics Pakistan", "construction cargo Karachi", "cement machinery container Pakistan", "CPEC construction logistics"],
+          "intent": "commercial",
+          "priority": 2,
+          "status": "planned",
+          "word_count_target": 1600,
+          "notes": "CPEC + housing boom driving huge demand. Ceramic tiles, sanitary ware, steel structures, electrical materials, plant & machinery. Project-timeline sensitive delivery. Lahore, Islamabad, Rawalpindi construction corridors. Low-bed for heavy plant. Angle: CPEC has 38 of 90 projects ongoing."
+        },
+        {
+          "slug": "food-processing-agriculture-container-logistics-pakistan",
+          "title": "Food & Agricultural Commodity Container Logistics from Karachi",
+          "target_keyword": "food commodity container logistics Pakistan",
+          "secondary_keywords": ["agriculture import container Pakistan", "food processing logistics Karachi", "commodity freight Pakistan", "perishable cargo Pakistan"],
+          "intent": "commercial",
+          "priority": 3,
+          "status": "planned",
+          "word_count_target": 1500,
+          "notes": "Edible oils, pulses, wheat, palm oil, spices — Pakistan's largest import categories by volume. PSQCA + Ministry of Commerce documentation requirements. Cold chain for perishables. Delivery to flour mills (Lahore, Multan, Faisalabad), food processing zones. Halal certification documentation."
+        },
+        {
+          "slug": "chemical-polymer-container-import-logistics-pakistan",
+          "title": "Chemical and Polymer Import Container Logistics from Karachi",
+          "target_keyword": "chemical container import Pakistan",
+          "secondary_keywords": ["polymer logistics Pakistan", "industrial chemical transport Karachi", "plastic raw material container Pakistan", "PSQCA chemical documentation"],
+          "intent": "commercial",
+          "priority": 3,
+          "status": "planned",
+          "word_count_target": 1500,
+          "notes": "PVC, polyethylene, chemicals for textile, pharmaceutical, and manufacturing sectors. PSQCA documentation, hazmat classification, segregation requirements, factory delivery in industrial zones. Pakistan chemical import $3B+ annually."
+        },
+        {
+          "slug": "solar-energy-equipment-import-container-pakistan",
+          "title": "Solar Panel and Renewable Energy Equipment Import Logistics from Karachi",
+          "target_keyword": "solar panel import logistics Pakistan",
+          "secondary_keywords": ["solar equipment container Pakistan", "renewable energy import Karachi", "solar panel transport Pakistan", "photovoltaic logistics Pakistan"],
+          "intent": "commercial",
+          "priority": 2,
+          "status": "planned",
+          "word_count_target": 1500,
+          "notes": "Pakistan solar sector exploding — over 17GW installed by 2025. Solar panels, inverters, batteries imported in 20ft/40ft containers. AEDB documentation, anti-dumping duties exemptions on solar panels. Fragile cargo handling, container stuffing requirements. Delivery to project sites and distributors across Punjab and KPK."
+        },
+        {
+          "slug": "garment-export-container-logistics-pakistan",
+          "title": "Garment Export Container Logistics from Pakistan: Factory to Port Guide",
+          "target_keyword": "garment export container logistics Pakistan",
+          "secondary_keywords": ["garment export transport Pakistan", "ready-made garment container", "clothing export logistics Lahore", "garment cut-off deadline Pakistan"],
+          "intent": "commercial",
+          "priority": 2,
+          "status": "planned",
+          "word_count_target": 1700,
+          "notes": "Sub-sector of textiles — garments specifically. Differentiator: garment exporters have different stuffing requirements (40ft HC, hanging garment bags vs flat-pack), more strict cut-off discipline, buyers are in EU/US with L/C payment terms. Cover: compliant stuffing for garments, L/C documentation alignment, VGM (verified gross mass) requirements, Sialkot and Lahore garment zone logistics."
+        }
+      ]
+    },
+
+    {
+      "id": "buyer-decision",
+      "name": "Freight Rates, Costs & Buyer Comparisons",
+      "rationale": "Decision-stage content for buyers evaluating options. Searches like 'container freight rates Pakistan' come from buyers close to committing. This cluster builds trust by answering the hard questions competitors refuse to publish.",
+      "seo_notes": "High intent, moderate volume. Freight rates content earns trust through transparency. Buyers who find this content via organic search convert at higher rates than ad traffic.",
+      "articles": [
+        {
+          "slug": "container-freight-rates-pakistan-2026",
+          "title": "Container Freight Rates in Pakistan 2026: What to Expect on Each Route",
+          "target_keyword": "container freight rates Pakistan 2026",
+          "secondary_keywords": ["container transport rates Karachi", "Karachi Lahore freight rate", "container haulage cost Pakistan", "freight pricing Pakistan"],
+          "intent": "decision",
+          "priority": 1,
+          "status": "planned",
+          "word_count_target": 1800,
+          "notes": "Give honest rate context: Rs14,000/ton Karachi–Lahore (April 2026, post 40% diesel rise). Rate structure: base + fuel surcharge + weight compliance + remote delivery premium. Full route table: 20ft and 40ft rates Karachi to all major cities. Explain rate change drivers. Direct to WhatsApp for quotes."
+        },
+        {
+          "slug": "container-transit-times-pakistan-guide",
+          "title": "Container Transit Times from Karachi: Complete City-by-City Guide",
+          "target_keyword": "container transit times Pakistan",
+          "secondary_keywords": ["how long container Karachi to Lahore", "delivery time container Pakistan", "freight transit time Karachi"],
+          "intent": "decision",
+          "priority": 1,
+          "status": "planned",
+          "word_count_target": 1600,
+          "notes": "Full table: city, distance, typical transit days for 20ft/40ft, factors affecting timing. Explain what adds/removes days: pre-arrival filing, channel assignment, night dispatch restrictions, NHMP checkposts. Internal link to all route articles."
+        },
+        {
+          "slug": "how-to-avoid-container-demurrage-pakistan",
+          "title": "How to Avoid Container Demurrage and Detention Charges at Karachi Port",
+          "target_keyword": "container demurrage Karachi port",
+          "secondary_keywords": ["demurrage charges Pakistan", "detention fee container", "free days container Pakistan", "port demurrage cost"],
+          "intent": "decision",
+          "priority": 2,
+          "status": "planned",
+          "word_count_target": 1600,
+          "notes": "Free days (currently 5, proposal to cut to 3), how demurrage compounds per day, pre-arrival filing as prevention tool, what to do if already in demurrage. Real demurrage rate examples by shipping line tier."
+        },
+        {
+          "slug": "fcl-vs-lcl-container-pakistan",
+          "title": "FCL vs LCL Container Shipping in Pakistan: Which Is Right for Your Cargo?",
+          "target_keyword": "FCL vs LCL Pakistan",
+          "secondary_keywords": ["full container load Pakistan", "LCL groupage Pakistan", "consolidation vs FCL Pakistan"],
+          "intent": "decision",
+          "priority": 2,
+          "status": "planned",
+          "word_count_target": 1500,
+          "notes": "Break-even CBM point, cost-per-CBM comparison, transit time difference (LCL adds 3–7 days at CFS), damage risk in consolidation. Decision table by cargo volume."
+        },
+        {
+          "slug": "nlc-vs-private-container-transport-pakistan",
+          "title": "NLC vs Private Container Transport in Pakistan: Which Is Better?",
+          "target_keyword": "NLC vs private container transport Pakistan",
+          "secondary_keywords": ["NLC logistics Pakistan", "National Logistics Corporation vs private", "best container company Pakistan", "NLC containers Pakistan"],
+          "intent": "decision",
+          "priority": 2,
+          "status": "planned",
+          "word_count_target": 1600,
+          "notes": "NLC is the government-backed logistics company. Many importers default to NLC because it feels safe. This article objectively compares: rates (NLC is often 10–20% higher), speed, flexibility, dry port access, responsiveness. Private operators are faster on most routes. NLC wins for bonded transit and some government cargo. Fair comparison builds trust."
+        },
+        {
+          "slug": "how-to-calculate-landed-cost-import-pakistan",
+          "title": "How to Calculate Total Landed Cost for Imports into Pakistan",
+          "target_keyword": "landed cost calculation import Pakistan",
+          "secondary_keywords": ["total import cost Pakistan", "landed cost formula Pakistan", "customs duty calculation Pakistan", "import cost breakdown Pakistan"],
+          "intent": "decision",
+          "priority": 2,
+          "status": "planned",
+          "word_count_target": 1700,
+          "notes": "Full landed cost formula: FOB/CIF + sea freight + insurance + import duty + Sales Tax + WHT + port charges + clearance fee + inland transport + last-mile. Real worked example (textile machinery, consumer electronics). Common mistakes (ignoring WHT, underestimating inland). Downloadable spreadsheet prompt."
+        },
+        {
+          "slug": "container-insurance-guide-pakistan-importers",
+          "title": "Container Cargo Insurance Guide for Pakistan Importers",
+          "target_keyword": "container cargo insurance Pakistan",
+          "secondary_keywords": ["marine insurance Pakistan", "cargo insurance import Pakistan", "Institute Cargo Clauses Pakistan", "freight insurance Pakistan"],
+          "intent": "decision",
+          "priority": 3,
+          "status": "planned",
+          "word_count_target": 1500,
+          "notes": "Institute Cargo Clauses (A, B, C) explained for Pakistan buyers. What inland transport risks are covered vs excluded. Real scenarios: container accident on M-2, wet damage from rain, theft at CFS. How to file a claim. Covers both sea and inland legs. Recommended for buyers importing >$50,000 per container."
+        },
+        {
+          "slug": "10-questions-ask-logistics-company-pakistan",
+          "title": "10 Questions to Ask Before Hiring a Logistics Company in Pakistan",
+          "target_keyword": "questions to ask logistics company Pakistan",
+          "secondary_keywords": ["choosing logistics company Pakistan", "logistics company evaluation Pakistan", "freight company checklist Pakistan"],
+          "intent": "decision",
+          "priority": 2,
+          "status": "planned",
+          "word_count_target": 1600,
+          "notes": "Harder-hitting version of the existing weak article. Specific questions: Which terminal do you operate at? How do you handle weight bridge compliance? What's your clearance agent network? Can you provide documentation before dispatch? What happens if the container is delayed? Each question has an explanation of why it matters and red flag answers to watch for."
+        },
+        {
+          "slug": "container-documentation-checklist-pakistan-importers",
+          "title": "Complete Container Documentation Checklist for Pakistan Importers",
+          "target_keyword": "container documentation checklist Pakistan",
+          "secondary_keywords": ["import documents Pakistan", "customs clearance documents list Pakistan", "BL invoice packing list Pakistan", "WeBOC documents required"],
+          "intent": "decision",
+          "priority": 2,
+          "status": "planned",
+          "word_count_target": 1500,
+          "notes": "Printable/referenceable checklist. Every document in the import chain: BL/AWB, commercial invoice, packing list, certificate of origin, GD filing, PSQCA/DRAP/MOC permits by commodity, duty payment receipt, gate pass. Table format with purpose of each document and who provides it. Most common missing documents that cause Red Channel."
+        },
+        {
+          "slug": "how-to-track-container-shipment-pakistan",
+          "title": "How to Track a Container Shipment in Pakistan",
+          "target_keyword": "how to track container shipment Pakistan",
+          "secondary_keywords": ["container tracking Pakistan", "WeBOC tracking", "Karachi port container tracking", "shipment tracking KICT PICT"],
+          "intent": "decision",
+          "priority": 3,
+          "status": "planned",
+          "word_count_target": 1400,
+          "notes": "Practical guide: shipping line tracking portals (Maersk, MSC, CMA CGM), WeBOC GD status tracking, KICT/PICT terminal tracking pages, QICT portal. How to read a container tracking event log. What 'vessel arrived,' 'customs hold,' 'gate pass issued' mean in practice. What to do when the container goes silent."
+        }
+      ]
+    },
+
+    {
+      "id": "port-operations",
+      "name": "Karachi Port & Container Operations",
+      "rationale": "Deep operational content that no competitor has published at this depth. Builds authority with the most valuable buyers — those who import regularly and know enough to evaluate a partner's real knowledge. Also ranks for long-tail searches by clearing agents, logistics buyers, and supply chain professionals.",
+      "seo_notes": "Lower direct commercial intent but high authority signal. Buyers who read this content convert at higher ticket value. Gets cited by trade publications.",
+      "articles": [
+        {
+          "slug": "weboc-customs-clearance-guide-pakistan",
+          "title": "WeBOC Customs Clearance at Karachi Port: Step-by-Step Guide for Importers",
+          "target_keyword": "WeBOC customs clearance Pakistan",
+          "secondary_keywords": ["WeBOC import process", "customs clearance Karachi port step by step", "Green Yellow Red channel Pakistan", "goods declaration WeBOC"],
+          "intent": "awareness",
+          "priority": 1,
+          "status": "planned",
+          "word_count_target": 1800,
+          "notes": "WeBOC step by step: GD creation, HS code selection, channel assignment, duty payment via 1-Link/banking, gate pass. Real timelines per channel. Pre-arrival filing explained. Common mistakes: wrong HS code, under-declaration, missing SRO. 48-hour dwell target context."
+        },
+        {
+          "slug": "karachi-port-terminals-guide-kict-pict-qict",
+          "title": "KICT, PICT, QICT: Which Karachi Port Terminal Handles Your Container?",
+          "target_keyword": "Karachi port terminals KICT PICT QICT",
+          "secondary_keywords": ["KICT vs PICT", "Port Qasim QICT", "which terminal Karachi port", "container terminal guide Pakistan"],
+          "intent": "awareness",
+          "priority": 2,
+          "status": "planned",
+          "word_count_target": 1500,
+          "notes": "How to find your terminal from BL. KICT (Hutchison Ports), PICT (DP World), QICT (COSCO), FOTCO. Gate hours, documentation required at each. Common confusion: BL shows agent name not terminal."
+        },
+        {
+          "slug": "container-dwell-time-pakistan-guide",
+          "title": "Container Dwell Time at Karachi Port: What It Is and How to Reduce It",
+          "target_keyword": "container dwell time Karachi",
+          "secondary_keywords": ["port dwell time Pakistan", "reduce container waiting time Karachi", "container stuck port Pakistan", "fast port clearance Pakistan"],
+          "intent": "awareness",
+          "priority": 2,
+          "status": "planned",
+          "word_count_target": 1500,
+          "notes": "What dwell time is, what it costs, 5 main causes, practical steps to reduce. Stat: pre-arrival filers clear 40–60% faster. Government 48-hour target context."
+        },
+        {
+          "slug": "karachi-port-gate-pass-procedure-guide",
+          "title": "Karachi Port Gate Pass Procedure: How to Get Your Container Out",
+          "target_keyword": "Karachi port gate pass procedure",
+          "secondary_keywords": ["gate pass container Karachi", "port gate out procedure Pakistan", "KICT gate pass", "container release Karachi port"],
+          "intent": "awareness",
+          "priority": 2,
+          "status": "planned",
+          "word_count_target": 1500,
+          "notes": "Step-by-step: who generates the gate pass (clearing agent), what documents driver carries to gate, weight bridge check, terminal slot booking, gate queue times (worst in morning, best mid-day). What happens if gate pass expires. Very practical, no competitor has this."
+        },
+        {
+          "slug": "port-qasim-vs-karachi-port-importers-guide",
+          "title": "Port Qasim vs Karachi Port: Which Should Your Cargo Use?",
+          "target_keyword": "Port Qasim vs Karachi Port",
+          "secondary_keywords": ["Port Qasim QICT", "Karachi Port KICT", "which port Pakistan import", "Port Qasim vs KPT"],
+          "intent": "awareness",
+          "priority": 2,
+          "status": "planned",
+          "word_count_target": 1500,
+          "notes": "Most importers don't get to choose — shipping line decides. But some do. Cover: commodity types at each port, congestion comparison, distance from industrial zones, rate differences, automotive/industrial bias at Port Qasim vs general cargo at Karachi Port."
+        },
+        {
+          "slug": "pakistan-dry-ports-guide",
+          "title": "Pakistan Dry Ports Guide: NLC Terminals, Inland Container Depots & Where to Clear",
+          "target_keyword": "Pakistan dry ports guide",
+          "secondary_keywords": ["dry port Pakistan", "NLC dry port Lahore", "inland container depot Pakistan", "ICD Pakistan customs"],
+          "intent": "awareness",
+          "priority": 3,
+          "status": "planned",
+          "word_count_target": 1600,
+          "notes": "NLC terminals: Lahore MICT, Islamabad, Quetta, Hyderabad. Sialkot Dry Port, Faisalabad ICD. When to use dry port vs seaport clearance (save on Karachi hotel/dwell, pay transit bond). Bond transfer process. Table: dry port locations, bonded capacity, commodities handled."
+        },
+        {
+          "slug": "red-channel-examination-karachi-port-guide",
+          "title": "Red Channel Examination at Karachi Port: What Happens and How to Prepare",
+          "target_keyword": "Red Channel examination Karachi port",
+          "secondary_keywords": ["Red Channel customs Pakistan", "physical examination customs Pakistan", "customs exam Karachi", "how to pass Red Channel"],
+          "intent": "awareness",
+          "priority": 3,
+          "status": "planned",
+          "word_count_target": 1500,
+          "notes": "What Red Channel means, why you might get it (new importer, high-risk commodity, mismatched value), what actually happens during physical examination, examiner presence requirements, additional documentation needed, how to minimise Red Channel assignment through correct GD filing. Timeline: 1–3 additional days."
+        },
+        {
+          "slug": "hs-code-guide-pakistan-importers",
+          "title": "HS Code Guide for Pakistan Importers: How to Classify Your Cargo",
+          "target_keyword": "HS code guide Pakistan importers",
+          "secondary_keywords": ["harmonized system Pakistan", "tariff code Pakistan customs", "HS code classification Pakistan", "correct HS code WeBOC"],
+          "intent": "awareness",
+          "priority": 3,
+          "status": "planned",
+          "word_count_target": 1600,
+          "notes": "The most consequential pre-clearance decision — wrong HS code triggers re-assessment or Red Channel. Explain HS structure (chapter, heading, subheading), Pakistan Customs Tariff (PCT), SRO exemptions by HS code, how to find the right code for textiles, machinery, chemicals, food. FBR PCT search tool walkthrough. Real examples."
+        },
+        {
+          "slug": "container-port-charges-pakistan-guide",
+          "title": "Container Port Charges at Karachi Port: What Importers Actually Pay",
+          "target_keyword": "container port charges Pakistan",
+          "secondary_keywords": ["Karachi port charges", "terminal handling charges Pakistan", "THC container Pakistan", "port fees importer Pakistan"],
+          "intent": "awareness",
+          "priority": 3,
+          "status": "planned",
+          "word_count_target": 1500,
+          "notes": "Breakdown of every charge: THC (terminal handling charge), port development surcharge, container scanning fee, port levy, documentation fee. Who charges what (shipping line vs terminal vs KPT vs FBR). Common surprise charges importers miss when budgeting. Table: typical charge amounts for 20ft and 40ft."
+        },
+        {
+          "slug": "vgm-verified-gross-mass-guide-pakistan",
+          "title": "VGM (Verified Gross Mass) Requirements for Pakistan Exporters",
+          "target_keyword": "VGM requirements Pakistan exporters",
+          "secondary_keywords": ["verified gross mass container Pakistan", "SOLAS VGM Pakistan", "container weight declaration", "VGM export Pakistan shipping"],
+          "intent": "awareness",
+          "priority": 3,
+          "status": "planned",
+          "word_count_target": 1400,
+          "notes": "SOLAS VGM requirement: all export containers need verified gross mass before vessel loading. Method 1 (weigh stuffed container) vs Method 2 (calculate). Who submits to shipping line, deadline before cut-off, what happens if VGM is missing or wrong. Pakistan port weight bridge as VGM evidence. Especially relevant for textile exporters."
+        }
+      ]
+    }
+  ],
+
+  "existing_posts_rewrite_queue": [
+    {
+      "current_slug": "how-container-transport-works-in-pakistan",
+      "verdict": "rewrite",
+      "issue": "Too generic. Four flat paragraphs. No tables, no actionable specificity. A buyer from Lahore learns nothing they couldn't find on Google in 30 seconds.",
+      "rewrite_direction": "Genuine operational guide. Add: transit time table by city, documentation checklist, step-by-step port release flow, cost context. Target: definitive FAQ page."
+    },
+    {
+      "current_slug": "karachi-port-logistics-guide",
+      "verdict": "rewrite",
+      "issue": "Right topics, surface depth. No terminal-specific detail, no timeline, no differentiation.",
+      "rewrite_direction": "Deeper on each terminal, actual gate pass / slot system, dwell time targets with context, actionable pre-arrival filing explanation."
+    },
+    {
+      "current_slug": "difference-between-20ft-and-40ft-containers",
+      "verdict": "expand",
+      "issue": "Has good structure and a table. Thin on Pakistan-specific rate context and buyer decision logic.",
+      "rewrite_direction": "Add route-specific rate comparison table, expand High Cube section, add 'which container for my cargo' decision framework with Pakistan commodity examples."
+    },
+    {
+      "current_slug": "freight-forwarding-process-explained",
+      "verdict": "rewrite",
+      "issue": "Generic, indistinguishable from any other logistics site globally.",
+      "rewrite_direction": "WeBOC-specific process, real document checklist explaining what clearing agent does with each document, most common errors that cause delays, commercial CTA."
+    },
+    {
+      "current_slug": "how-to-choose-a-logistics-company-in-karachi",
+      "verdict": "rewrite",
+      "issue": "Reads like marketing copy, not a real buyer evaluation guide.",
+      "rewrite_direction": "10 specific vetting questions, red flags to watch for, how to verify terminal experience, how to read a freight estimate. Usable as an actual evaluation checklist."
+    }
+  ],
+
+  "publishing_order": {
+    "phase_1_immediate": [
+      "container-transport-karachi-to-lahore",
+      "container-freight-rates-pakistan-2026",
+      "container-transit-times-pakistan-guide",
+      "container-transport-for-textile-exporters-pakistan",
+      "weboc-customs-clearance-guide-pakistan"
+    ],
+    "phase_2_next": [
+      "container-transport-karachi-to-faisalabad",
+      "container-transport-karachi-to-islamabad",
+      "how-to-avoid-container-demurrage-pakistan",
+      "machinery-import-container-transport-pakistan",
+      "karachi-port-terminals-guide-kict-pict-qict",
+      "nlc-vs-private-container-transport-pakistan",
+      "how-to-calculate-landed-cost-import-pakistan",
+      "solar-energy-equipment-import-container-pakistan",
+      "garment-export-container-logistics-pakistan"
+    ],
+    "phase_3_then": [
+      "container-transport-karachi-to-rawalpindi",
+      "container-transport-karachi-to-multan",
+      "container-transport-karachi-to-peshawar",
+      "container-transport-karachi-to-sialkot",
+      "container-transport-karachi-to-quetta",
+      "fcl-vs-lcl-container-pakistan",
+      "pharmaceutical-cargo-transport-karachi",
+      "fmcg-container-distribution-pakistan",
+      "10-questions-ask-logistics-company-pakistan",
+      "container-documentation-checklist-pakistan-importers",
+      "karachi-port-gate-pass-procedure-guide",
+      "port-qasim-vs-karachi-port-importers-guide",
+      "automotive-parts-import-logistics-karachi",
+      "construction-materials-container-transport-pakistan"
+    ],
+    "phase_4_complete": [
+      "container-transport-karachi-to-gujranwala",
+      "container-transport-karachi-to-gujrat",
+      "container-transport-karachi-to-sargodha",
+      "container-transport-karachi-to-bahawalpur",
+      "steel-raw-materials-container-transport-pakistan",
+      "container-dwell-time-pakistan-guide",
+      "pakistan-dry-ports-guide",
+      "red-channel-examination-karachi-port-guide",
+      "hs-code-guide-pakistan-importers",
+      "container-port-charges-pakistan-guide",
+      "vgm-verified-gross-mass-guide-pakistan",
+      "container-insurance-guide-pakistan-importers",
+      "how-to-track-container-shipment-pakistan",
+      "food-processing-agriculture-container-logistics-pakistan",
+      "chemical-polymer-container-import-logistics-pakistan"
+    ]
+  },
+
+  "totals": {
+    "cluster_1_routes": 12,
+    "cluster_2_verticals": 11,
+    "cluster_3_decision": 10,
+    "cluster_4_operations": 10,
+    "total_new_articles": 43,
+    "existing_rewrites": 5,
+    "total_content_pieces": 48
+  }
+}

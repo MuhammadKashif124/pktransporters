@@ -1,6 +1,7 @@
 import { absoluteUrl } from "@/lib/utils";
 import { site } from "@/lib/site";
-import type { FAQ, Service, CityPage, BlogPost } from "@/lib/content";
+import type { FAQ, Service, CityPage } from "@/lib/content";
+import type { BlogPost } from "@/lib/blog-posts";
 
 export function organizationSchema() {
   return {
@@ -129,8 +130,8 @@ export function articleSchema(post: BlogPost) {
     headline: post.title,
     description: post.excerpt,
     url: absoluteUrl(`/blog/${post.slug}`),
-    datePublished: post.publishedAt,
-    dateModified: post.publishedAt,
+    datePublished: post.date,
+    dateModified: post.date,
     author: {
       "@type": "Person",
       name: post.author

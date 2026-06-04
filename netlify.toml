@@ -4,3 +4,10 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+# Enforce non-www canonical domain
+[[redirects]]
+  from = "https://www.pktransporters.com/*"
+  to = "https://pktransporters.com/:splat"
+  status = 301
+  force = true

@@ -13,7 +13,7 @@ export const site = {
   tagline: "Pakistan's trusted container transport and logistics partner with nationwide coverage and Karachi port expertise."
 };
 
-const defaultOgImage = "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1200&q=80";
+const defaultOgImage = absoluteUrl("/og-default.jpg");
 
 export function createMetadata({
   title,
