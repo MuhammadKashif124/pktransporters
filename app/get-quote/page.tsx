@@ -23,7 +23,9 @@ export default function GetQuotePage() {
           <MessageCircle className="h-7 w-7" />
           Request a Quote on WhatsApp
         </a>
-        <p className="text-slate-400 text-sm">{site.phone} &mdash; {site.contactName}</p>
+        <a href={`https://wa.me/${site.whatsapp}`} className="text-sm font-semibold text-green-400 hover:text-green-300 hover:underline">
+          Or chat directly with a representative on WhatsApp
+        </a>
       </div>
     </section>
   );

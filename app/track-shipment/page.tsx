@@ -28,7 +28,12 @@ export default function TrackShipmentPage() {
             <MessageCircle className="h-7 w-7" />
             Track via WhatsApp
           </a>
-          <p className="text-slate-400 text-sm">{site.phone} &mdash; {site.contactName}</p>
+          <a
+            href={`https://wa.me/${site.whatsapp}?text=Hi%2C%20I%20would%20like%20to%20track%20my%20shipment.%20Reference%3A%20`}
+            className="text-sm font-semibold text-green-400 hover:text-green-300 hover:underline"
+          >
+            Or send our team a message on WhatsApp
+          </a>
         </div>
       </div>
     </section>

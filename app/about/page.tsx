@@ -89,10 +89,10 @@ export default function AboutPage() {
           <div>
             <h2 className="text-2xl font-black">Contact the team</h2>
             <p className="mt-4 leading-8 text-muted-foreground">
-              For freight estimates, route enquiries, or logistics coordination, contact Muhammad Kashif
-              and the operations team directly. The fastest route to a quote is the request form — share
-              your container size, pickup point, destination, and timeline, and you will receive a
-              freight estimate before any commitment is required.
+              For freight estimates, route enquiries, or logistics coordination, contact our
+              operations team directly on WhatsApp. The fastest route to a quote is a WhatsApp
+              message — share your container size, pickup point, destination, and timeline, and
+              you will receive a freight estimate before any commitment is required.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Button asChild size="lg">

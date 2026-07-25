@@ -19,7 +19,9 @@ export default function ContactPage() {
           <MessageCircle className="h-7 w-7" />
           Chat on WhatsApp
         </a>
-        <p className="text-muted-foreground text-sm">{site.phone} &mdash; {site.contactName}</p>
+        <a href={`https://wa.me/${site.whatsapp}`} className="text-sm font-semibold text-green-600 hover:text-green-700 hover:underline">
+          Prefer to type first? Message a representative on WhatsApp
+        </a>
         <p className="text-muted-foreground text-sm">{site.address}</p>
       </div>
     </SimplePage>

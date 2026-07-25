@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { MessageCircle } from "lucide-react";
 import { services, cityPages } from "@/lib/content";
 import { site } from "@/lib/site";
 
@@ -24,9 +25,15 @@ export function SiteFooter() {
         </div>
         <div>
           <div className="font-bold">Contact</div>
-          <div className="mt-3 space-y-2 text-sm text-slate-300">
+          <div className="mt-3 space-y-3 text-sm text-slate-300">
             <p>{site.address}</p>
-            <a href={`https://wa.me/${site.whatsapp}`} className="block text-green-400 hover:text-green-300">WhatsApp: {site.phone}</a>
+            <a
+              href={`https://wa.me/${site.whatsapp}`}
+              className="inline-flex items-center gap-2 rounded-lg bg-green-600 px-4 py-2 font-semibold text-white hover:bg-green-700 transition-colors"
+            >
+              <MessageCircle className="h-4 w-4" />
+              Chat on WhatsApp
+            </a>
           </div>
         </div>
       </div>
