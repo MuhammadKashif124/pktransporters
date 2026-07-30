@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, Phone } from "lucide-react";
 import { services, cityPages } from "@/lib/content";
 import { site } from "@/lib/site";
 
@@ -27,6 +27,7 @@ export function SiteFooter() {
           <div className="font-bold">Contact</div>
           <div className="mt-3 space-y-3 text-sm text-slate-300">
             <p>{site.address}</p>
+            <p>Speak with {site.contactPerson}: {site.phone} / {site.phoneSecondary} (Call or WhatsApp)</p>
             <a
               href={`https://wa.me/${site.whatsapp}`}
               className="inline-flex items-center gap-2 rounded-lg bg-green-600 px-4 py-2 font-semibold text-white hover:bg-green-700 transition-colors"
@@ -34,6 +35,14 @@ export function SiteFooter() {
               <MessageCircle className="h-4 w-4" />
               Chat on WhatsApp
             </a>
+            <a
+              href={`tel:${site.phone.replace(/\s+/g, "")}`}
+              className="inline-flex items-center gap-2 rounded-lg border border-slate-600 px-4 py-2 font-semibold text-white hover:bg-slate-800 transition-colors"
+            >
+              <Phone className="h-4 w-4" />
+              Call Now
+            </a>
+            <p className="text-xs text-slate-400">Corporate & documentation inquiries: {site.corporatePhone}</p>
           </div>
         </div>
       </div>

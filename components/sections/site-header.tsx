@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, MessageCircle } from "lucide-react";
+import { Menu, X, MessageCircle, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { site } from "@/lib/site";
 
@@ -69,6 +69,15 @@ export function SiteHeader() {
           <div className="flex items-center gap-2">
             <Button
               asChild
+              variant="outline"
+              className="hidden sm:inline-flex"
+            >
+              <a href={`tel:${site.phone.replace(/\s+/g, "")}`}>
+                <Phone className="h-4 w-4" /> Call Us
+              </a>
+            </Button>
+            <Button
+              asChild
               className="hidden sm:inline-flex bg-green-600 hover:bg-green-700 text-white border-green-600"
             >
               <a href={`https://wa.me/${site.whatsapp}`}>
@@ -119,7 +128,7 @@ export function SiteHeader() {
               ))}
             </div>
 
-            <div className="mt-auto border-t border-[var(--pk-line)] p-4">
+            <div className="mt-auto border-t border-[var(--pk-line)] p-4 space-y-2">
               <a
                 href={`https://wa.me/${site.whatsapp}`}
                 className="flex items-center justify-center gap-2 w-full rounded-xl bg-green-600 px-4 py-3 text-base font-bold text-white hover:bg-green-700 transition"
@@ -127,6 +136,14 @@ export function SiteHeader() {
               >
                 <MessageCircle className="h-5 w-5" />
                 WhatsApp Us
+              </a>
+              <a
+                href={`tel:${site.phone.replace(/\s+/g, "")}`}
+                className="flex items-center justify-center gap-2 w-full rounded-xl border border-[var(--pk-line)] px-4 py-3 text-base font-bold text-[var(--pk-ink-0)] transition"
+                onClick={() => setOpen(false)}
+              >
+                <Phone className="h-5 w-5" />
+                Call Us
               </a>
             </div>
           </nav>
