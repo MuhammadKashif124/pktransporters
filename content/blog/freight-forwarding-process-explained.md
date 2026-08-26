@@ -1,5 +1,5 @@
 ---
-title: "Freight Forwarding in Pakistan Explained: Documents, WeBOC, Customs, and Inland Delivery"
+title: "Freight Forwarding in Pakistan Explained: Documents, Booking, and Inland Delivery"
 date: "2025-12-22"
 author: "PK Transporters Operations Team"
 category: "Freight Forwarding"
@@ -10,10 +10,10 @@ tags:
   - "import export"
   - "Pakistan Customs Act"
   - "clearing agent"
-excerpt: "A comprehensive, plain-language guide to freight forwarding in Pakistan — from shipper booking to door delivery, covering documents, WeBOC customs clearance, duty payment, and inland transport."
+excerpt: "A comprehensive, plain-language guide to freight forwarding in Pakistan — from shipper booking to door delivery, covering documents, carrier coordination, customs handoff, and inland transport."
 featuredImage: "/images/blog/freight-forwarding.jpg"
-seoTitle: "Freight Forwarding in Pakistan Explained | WeBOC, Customs & Delivery Guide 2026"
-seoDescription: "Complete guide to freight forwarding in Pakistan — what forwarders do, key documents, WeBOC customs channels, duty payment, pre-arrival filing, and inland delivery from Karachi."
+seoTitle: "Freight Forwarding in Pakistan Explained | Full Process Guide"
+seoDescription: "Complete guide to freight forwarding in Pakistan — what forwarders do, key documents, carrier booking, duty payment, and inland delivery from Karachi."
 ---
 
 Freight forwarding is one of the most operationally dense professions in Pakistan's trade ecosystem — and one of the least understood by the businesses that depend on it. An importer importing machinery from Germany and an exporter shipping garments to the UK are both relying on a chain of coordination that spans shipping lines, customs authorities, port terminals, banks, and transport companies. The freight forwarder sits at the centre of that chain.
@@ -68,7 +68,7 @@ Pre-arrival filing means:
 
 ### Step 3: Customs Clearance Through WeBOC
 
-**WeBOC (Web-Based One Customs)** is the FBR's electronic customs platform, introduced as part of Pakistan's trade facilitation reforms. All commercial import and export declarations must be filed through WeBOC. The system assigns each GD a unique number and tracks it through every stage.
+**WeBOC (Web-Based One Customs)** is the FBR's electronic customs platform, introduced as part of Pakistan's trade facilitation reforms. All commercial import and export declarations must be filed through WeBOC. The system assigns each GD a unique number and tracks it through every stage. For the full step-by-step breakdown of this stage — channel assignment, duty payment, and gate pass — see our dedicated [WeBOC customs clearance guide](/blog/weboc-customs-clearance-guide-pakistan).
 
 #### HS Code Classification
 
